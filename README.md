@@ -32,7 +32,7 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   + `#reviews-toggle`); review quotes render in ink, not muted gray.
 - About page (2026-11-10): personal rewrite from Cade — Gus is a father
   of five kids, two dogs, one cat; loves family vacations; selling cars
-  at Green Hyundai since 2015, started at the bottom and worked his way
+  at Green Hyundai since 2013, started at the bottom and worked his way
   up, Salesman of the Month many times. Four brothers, most in car sales
   past or present, following their father who served thousands at Green
   Hyundai. Photos (all supplied by Cade, resized to 1200px max):
