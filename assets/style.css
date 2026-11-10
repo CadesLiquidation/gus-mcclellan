@@ -5,7 +5,7 @@
     a { color:inherit; } img { max-width:100%; display:block; } button,input,select,textarea { font:inherit; }
     .wrap { width:min(1160px,calc(100% - 40px)); margin:0 auto; }
     .hero { position:relative; min-height:640px; display:grid; align-items:end; overflow:hidden; isolation:isolate; background:#0a3555; color:var(--white); }
-    .hero::before { content:""; position:absolute; inset:0; z-index:-2; background:url("dealership-2.jpg") center 58% / cover no-repeat; }
+    .hero::before { content:""; position:absolute; inset:-10px; z-index:-2; background:url("dealership-2.jpg") center 58% / cover no-repeat; filter:blur(3px); }
     .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(3,26,43,.94) 0%,rgba(3,31,52,.79) 45%,rgba(3,28,46,.26) 80%),linear-gradient(0deg,rgba(3,25,42,.66),transparent 55%); }
     .hero-inner { padding:88px 0 76px; max-width:700px; }
     .tenure { display:inline-flex; align-items:center; gap:10px; margin-bottom:22px; font-size:.9rem; font-weight:700; color:#d9f4ff; }
