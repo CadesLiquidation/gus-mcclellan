@@ -179,6 +179,56 @@
       </div>
     </section>
 
+    <section class="matcher" id="car-match">
+      <div class="wrap matcher-grid">
+        <div class="matcher-copy">
+          <h2>Make the first message easy.</h2>
+          <p>Choose what matters and this page will write a clean request for you. Tap <strong>Text Gus this request</strong> and it opens a text to him at (217) 671-2520 with the message already written — just hit send. No commitment — just a better starting point. You can also just call or text him directly at <a href="tel:+12176712520">(217) 671-2520</a>.</p>
+        </div>
+        <div class="panel">
+          <div class="fields">
+            <label>Vehicle type
+              <select id="vehicle">
+                <option value="an SUV">SUV</option>
+                <option value="a sedan">Sedan</option>
+                <option value="an EV or hybrid">EV or hybrid</option>
+                <option value="a three-row vehicle">Three-row vehicle</option>
+                <option value="a truck">Truck (Santa Cruz)</option>
+                <option value="something flexible">Not sure yet</option>
+              </select>
+            </label>
+            <label>New or used
+              <select id="condition">
+                <option value="new">New</option>
+                <option value="used">Used</option>
+                <option value="new or used">Either</option>
+              </select>
+            </label>
+            <label>Monthly budget or price range
+              <input id="budget" type="text" inputmode="decimal" placeholder="Example: around $450/month" />
+            </label>
+            <label>Shopping timeline
+              <select id="timeline">
+                <option value="this week">This week</option>
+                <option value="this month">This month</option>
+                <option value="in the next few months">Next few months</option>
+                <option value="just researching for now">Just researching</option>
+              </select>
+            </label>
+            <label class="full">Your message
+              <textarea id="message" aria-describedby="copy-status"></textarea>
+            </label>
+          </div>
+          <div class="actions">
+            <a class="btn dark" id="sms-send" href="sms:+12176712520?&amp;body=Hi%20Gus!">Text Gus this request</a>
+            <button class="btn" type="button" id="copy">Copy request</button>
+            <a class="btn" href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Open Facebook <span aria-hidden="true">↗</span></a>
+          </div>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
     <section style="padding-top:0">
       <div class="wrap">
         <div class="section-head">
@@ -275,55 +325,7 @@
       </div>
     </section>
 
-    <section class="matcher" id="car-match">
-      <div class="wrap matcher-grid">
-        <div class="matcher-copy">
-          <h2>Make the first message easy.</h2>
-          <p>Choose what matters and this page will write a clean request for you. Tap <strong>Text Gus this request</strong> and it opens a text to him at (217) 671-2520 with the message already written — just hit send. No commitment — just a better starting point. You can also just call or text him directly at <a href="tel:+12176712520">(217) 671-2520</a>.</p>
-        </div>
-        <div class="panel">
-          <div class="fields">
-            <label>Vehicle type
-              <select id="vehicle">
-                <option value="an SUV">SUV</option>
-                <option value="a sedan">Sedan</option>
-                <option value="an EV or hybrid">EV or hybrid</option>
-                <option value="a three-row vehicle">Three-row vehicle</option>
-                <option value="a truck">Truck (Santa Cruz)</option>
-                <option value="something flexible">Not sure yet</option>
-              </select>
-            </label>
-            <label>New or used
-              <select id="condition">
-                <option value="new">New</option>
-                <option value="used">Used</option>
-                <option value="new or used">Either</option>
-              </select>
-            </label>
-            <label>Monthly budget or price range
-              <input id="budget" type="text" inputmode="decimal" placeholder="Example: around $450/month" />
-            </label>
-            <label>Shopping timeline
-              <select id="timeline">
-                <option value="this week">This week</option>
-                <option value="this month">This month</option>
-                <option value="in the next few months">Next few months</option>
-                <option value="just researching for now">Just researching</option>
-              </select>
-            </label>
-            <label class="full">Your message
-              <textarea id="message" aria-describedby="copy-status"></textarea>
-            </label>
-          </div>
-          <div class="actions">
-            <a class="btn dark" id="sms-send" href="sms:+12176712520?&amp;body=Hi%20Gus!">Text Gus this request</a>
-            <button class="btn" type="button" id="copy">Copy request</button>
-            <a class="btn" href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Open Facebook <span aria-hidden="true">↗</span></a>
-          </div>
-          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
-        </div>
-      </div>
-    </section>
+
 
     <section style="padding-top:0">
       <div class="wrap">
