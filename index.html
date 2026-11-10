@@ -45,7 +45,7 @@
     .section-head { max-width:720px; margin-bottom:46px; }
     .award-grid { display:grid; grid-template-columns:1.4fr .8fr; gap:44px; align-items:start; }
     .side-photo { margin:0; max-width:280px; width:100%; }
-    .side-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; aspect-ratio:3/4; object-fit:cover; }
+    .side-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; }
     .side-photo figcaption { color:var(--muted); font-size:.85rem; margin-top:10px; }
     .award:last-of-type { border-bottom:1px solid var(--line); }
     .award strong { font-size:1.15rem; }
@@ -123,11 +123,12 @@
       section { padding:64px 0; }
       .cards { grid-template-columns:1fr; }
       .reasons,.referral-grid,.matcher-grid,.visit-grid,.award-grid { grid-template-columns:1fr; }
-      /* On a phone the photos sit beside the text as small portraits instead of full-width blocks. */
-      .meet-grid { grid-template-columns:112px 1fr; gap:18px; }
-      .meet-photo { max-width:112px; }
+      /* On a phone the photos are small and sit above the text, not beside a squeezed column. */
+      .meet-grid { grid-template-columns:1fr; }
+      .meet-photo { max-width:120px; }
+      .meet-photo img { aspect-ratio:1/1; border-radius:50%; height:auto; }
       .meet-photo figcaption { display:none; }
-      .side-photo { max-width:180px; }
+      .side-photo { max-width:240px; }
       .reason-main { min-height:320px; } .referral-grid { gap:30px; }
       .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
       footer .wrap { flex-direction:column; }
