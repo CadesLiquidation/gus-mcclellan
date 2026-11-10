@@ -43,7 +43,10 @@
     .proof span { color:var(--muted); font-size:.92rem; }
     section { padding:88px 0; }
     .section-head { max-width:720px; margin-bottom:46px; }
-    .award { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:baseline; padding:18px 0; border-top:1px solid var(--line); }
+    .award-grid { display:grid; grid-template-columns:1.4fr .8fr; gap:44px; align-items:start; }
+    .side-photo { margin:0; max-width:320px; width:100%; }
+    .side-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; aspect-ratio:3/4; object-fit:cover; }
+    .side-photo figcaption { color:var(--muted); font-size:.85rem; margin-top:10px; }
     .award:last-of-type { border-bottom:1px solid var(--line); }
     .award strong { font-size:1.15rem; }
     .award a { white-space:nowrap; }
@@ -119,7 +122,7 @@
       .proof-item { padding:22px 24px; } .proof-item + .proof-item { border-left:0; border-top:1px solid var(--line); }
       section { padding:64px 0; }
       .cards { grid-template-columns:1fr; }
-      .reasons,.referral-grid,.matcher-grid,.visit-grid,.meet-grid { grid-template-columns:1fr; }
+      .reasons,.referral-grid,.matcher-grid,.visit-grid,.meet-grid,.award-grid { grid-template-columns:1fr; }
       .reason-main { min-height:320px; } .referral-grid { gap:30px; }
       .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
       footer .wrap { flex-direction:column; }
@@ -163,12 +166,8 @@
         </div>
         <div class="meet-photos">
           <figure class="meet-photo">
-            <img src="assets/gus-portrait.jpg" alt="Gus McClellan" />
+            <img src="assets/gus-portrait.jpg" alt="Gus McClellan" width="744" height="1050" />
             <figcaption>Gus McClellan, Green Hyundai, Springfield</figcaption>
-          </figure>
-          <figure class="meet-photo">
-            <img src="assets/gus-showroom.jpg" alt="Gus McClellan in the Green Hyundai showroom" />
-            <figcaption>In the showroom at Green Hyundai</figcaption>
           </figure>
         </div>
       </div>
@@ -235,20 +234,26 @@
     </section>
 
     <section style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Salesman of the Month.</h2>
-          <p>Gus has been named Salesman of the Month at Green Hyundai, most recently two months running in the fall of 2026. He posted both on his Facebook page.</p>
+      <div class="wrap award-grid">
+        <div>
+          <div class="section-head">
+            <h2>Salesman of the Month.</h2>
+            <p>Gus has been named Salesman of the Month at Green Hyundai, most recently two months running in the fall of 2026. He posted both on his Facebook page.</p>
+          </div>
+          <div class="award">
+            <span><strong>October 2026</strong> — Salesman of the Month, Green Hyundai</span>
+            <a href="https://facebook.com/1204146364/posts/pfbid02FAN27DXUWLPPDbKp5MaExC6AfHeWq2nnfa1EyQPKdRTYxzDpWHX9uzFj8fAzxPkTl/" target="_blank" rel="noopener">See the post on Facebook ↗</a>
+          </div>
+          <div class="award">
+            <span><strong>September 2026</strong> — Salesman of the Month, Green Hyundai</span>
+            <a href="https://facebook.com/1204146364/posts/pfbid0gF3SXyVfpehLz8aRXu2paA7Y3DrYdkKy7HfXroNFQYoxCq8L6KGoWUoeMLrZxjKql/" target="_blank" rel="noopener">See the post on Facebook ↗</a>
+          </div>
+          <p class="small" style="margin-top:14px;">The months are from the timing of his posts — he announced the October award on November 3, 2026 and the September award on October 17, 2026. If he wins it again, this list gets updated.</p>
         </div>
-        <div class="award">
-          <span><strong>October 2026</strong> — Salesman of the Month, Green Hyundai</span>
-          <a href="https://facebook.com/1204146364/posts/pfbid02FAN27DXUWLPPDbKp5MaExC6AfHeWq2nnfa1EyQPKdRTYxzDpWHX9uzFj8fAzxPkTl/" target="_blank" rel="noopener">See the post on Facebook ↗</a>
-        </div>
-        <div class="award">
-          <span><strong>September 2026</strong> — Salesman of the Month, Green Hyundai</span>
-          <a href="https://facebook.com/1204146364/posts/pfbid0gF3SXyVfpehLz8aRXu2paA7Y3DrYdkKy7HfXroNFQYoxCq8L6KGoWUoeMLrZxjKql/" target="_blank" rel="noopener">See the post on Facebook ↗</a>
-        </div>
-        <p class="small" style="margin-top:14px;">The months are from the timing of his posts — he announced the October award on November 3, 2026 and the September award on October 17, 2026. If he wins it again, this list gets updated.</p>
+        <figure class="side-photo">
+          <img src="assets/gus-showroom.jpg" alt="Gus McClellan in the Green Hyundai showroom" width="744" height="992" />
+          <figcaption>In the showroom at Green Hyundai</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -403,6 +408,20 @@
 
   <script>
     (function () {
+      // Refresh should always start at the top. The browser was remembering
+      // the scroll position (and the #car-match link from the hero button),
+      // so a refresh landed in the middle of the page. Anchor links still
+      // work normally; only a refresh clears the jump.
+      if (window.history && 'scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+      }
+      var nav = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+      if (nav && nav.type === 'reload') {
+        if (window.history.replaceState) {
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        window.scrollTo(0, 0);
+      }
       var vehicle = document.getElementById('vehicle');
       var condition = document.getElementById('condition');
       var budget = document.getElementById('budget');
