@@ -16,9 +16,13 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   2026-11-09). Ask Gus for terms.
 - Photo: the dealership building photo only. No portrait of Gus is
   published here yet — add a verified photo of him when one is supplied.
-- Photos: both removed from the site 2026-11-10 at Cade's request — they
-  never sat right on mobile. The files are still in assets/ if needed.
-  Cade may find better ones later.
+- Pages (added 2026-11-10): Home plus `about/`, `achievements/`,
+  `referrals/`, `family/` — the family page is Gus's own version of the
+  cross-promotion (no redirect to cadesliquidation.com/family). All
+  pages share `assets/style.css` and a top nav.
+- Salesman of the Month (2026-11-10): the section stands on its own —
+  no Facebook post links, no "He posted both" line. Intro notes he has
+  won it many times over the years and the list starts with fall 2026.
 - Mobile check (2026-11-10): render the live page at 390px with
   Playwright before announcing a mobile fix — `npx playwright install
   chromium` (no --with-deps), `playwright-core` in /tmp, download the
