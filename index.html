@@ -42,10 +42,6 @@
     .proof span { color:var(--muted); font-size:.92rem; }
     section { padding:88px 0; }
     .section-head { max-width:720px; margin-bottom:46px; }
-    .award-grid { display:grid; grid-template-columns:1.4fr .8fr; gap:44px; align-items:start; }
-    .side-photo { margin:0; max-width:280px; width:100%; }
-    .side-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; }
-    .side-photo figcaption { color:var(--muted); font-size:.85rem; margin-top:10px; }
     .award:last-of-type { border-bottom:1px solid var(--line); }
     .award strong { font-size:1.15rem; }
     .award a { white-space:nowrap; }
@@ -88,11 +84,6 @@
     .panel .actions { margin-top:20px; }
     .copy-status { min-height:24px; margin:12px 0 0; color:var(--blue-2); font-weight:700; font-size:.9rem; }
     .visit-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
-    .meet-grid { display:grid; grid-template-columns:1.4fr .8fr; gap:44px; align-items:start; }
-    .meet-photos { display:grid; gap:16px; }
-    .meet-photo { margin:0; max-width:240px; width:100%; }
-    .meet-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; height:auto; object-fit:cover; aspect-ratio:3/4; }
-    .meet-photo figcaption { color:var(--muted); font-size:.85rem; margin-top:10px; }
     .meet-copy { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:30px; }
     .meet-copy h2 { font-size:clamp(2rem,4vw,3rem); }
     .address-card { padding:32px; background:var(--surface); border-top:5px solid var(--cyan); box-shadow:var(--shadow); }
@@ -121,14 +112,9 @@
       .proof-item { padding:22px 24px; } .proof-item + .proof-item { border-left:0; border-top:1px solid var(--line); }
       section { padding:64px 0; }
       .cards { grid-template-columns:1fr; }
-      .reasons,.referral-grid,.matcher-grid,.visit-grid,.award-grid { grid-template-columns:1fr; }
+      .reasons,.referral-grid,.matcher-grid,.visit-grid { grid-template-columns:1fr; }
       /* On a phone the photos are small and sit above the text, not beside a squeezed column. */
-      .meet-grid { grid-template-columns:1fr; }
-      .meet-photo { max-width:120px; }
-      .meet-photo img { aspect-ratio:1/1; border-radius:50%; height:auto; }
-      .meet-photo figcaption { display:none; }
-      .side-photo { max-width:240px; }
-      .award { flex-direction:column; gap:4px; padding:16px 0; }
+                .award { flex-direction:column; gap:4px; padding:16px 0; }
       .award a { white-space:normal; }
       .reason-main { min-height:320px; } .referral-grid { gap:30px; }
       .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
@@ -161,7 +147,7 @@
     </div>
 
     <section>
-      <div class="wrap meet-grid">
+      <div class="wrap">
         <div class="meet-copy">
           <h2>Meet Gus.</h2>
           <p>Gus has spent around a decade selling cars at the same store — Green Hyundai in Springfield. Most of his business is repeat customers and referrals, and that is by design: take care of people, and they come back and send their friends.</p>
@@ -170,12 +156,6 @@
             <a class="btn dark" href="tel:+12176712520">Call Gus — (217) 671-2520</a>
             <a class="btn" href="sms:+12176712520">Text Gus</a>
           </div>
-        </div>
-        <div class="meet-photos">
-          <figure class="meet-photo">
-            <img src="assets/gus-portrait.jpg" alt="Gus McClellan" width="744" height="1050" />
-            <figcaption>Gus McClellan, Green Hyundai, Springfield</figcaption>
-          </figure>
         </div>
       </div>
     </section>
@@ -266,7 +246,7 @@
     </section>
 
     <section>
-      <div class="wrap award-grid">
+      <div class="wrap">
         <div>
           <div class="section-head">
             <h2>Salesman of the Month.</h2>
@@ -274,18 +254,14 @@
           </div>
           <div class="award">
             <span><strong>October 2026</strong> — Salesman of the Month, Green Hyundai</span>
-            <a href="https://facebook.com/1204146364/posts/pfbid02FAN27DXUWLPPDbKp5MaExC6AfHeWq2nnfa1EyQPKdRTYxzDpWHX9uzFj8fAzxPkTl/" target="_blank" rel="noopener">See the post on Facebook ↗</a>
+            <a href="https://facebook.com/1204146364/posts/pfbid02FAN27DXUWLPPDbKp5MaExC6AfHeWq2nnfa1EyQPKdRTYxzDpWHX9uzFj8fAzxPkTl/" target="_blank" rel="noopener">See the post ↗</a>
           </div>
           <div class="award">
             <span><strong>September 2026</strong> — Salesman of the Month, Green Hyundai</span>
-            <a href="https://facebook.com/1204146364/posts/pfbid0gF3SXyVfpehLz8aRXu2paA7Y3DrYdkKy7HfXroNFQYoxCq8L6KGoWUoeMLrZxjKql/" target="_blank" rel="noopener">See the post on Facebook ↗</a>
+            <a href="https://facebook.com/1204146364/posts/pfbid0gF3SXyVfpehLz8aRXu2paA7Y3DrYdkKy7HfXroNFQYoxCq8L6KGoWUoeMLrZxjKql/" target="_blank" rel="noopener">See the post ↗</a>
           </div>
           <p class="small" style="margin-top:14px;">The months are from the timing of his posts — he announced the October award on November 3, 2026 and the September award on October 17, 2026. If he wins it again, this list gets updated.</p>
         </div>
-        <figure class="side-photo">
-          <img src="assets/gus-showroom.jpg" alt="Gus McClellan in the Green Hyundai showroom" width="744" height="992" />
-          <figcaption>In the showroom at Green Hyundai</figcaption>
-        </figure>
       </div>
     </section>
 
