@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="light" />
   <meta name="theme-color" content="#073b64" />
   <meta name="description" content="Gus McClellan sells new Hyundais, used Hyundais, and used cars from other brands at Green Hyundai in Springfield, IL. Around a decade at the same dealership. Call or text (217) 671-2520, or ask for Gus at Green Hyundai, 601 W. Stanford Ave." />
   <link rel="icon" href="data:," />
@@ -12,8 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
   <title>Gus McClellan | Green Hyundai, Springfield, IL</title>
   <style>
-    :root { color-scheme: light dark; --ink:#102231; --muted:#536979; --paper:#f6f9fb; --surface:#ffffff; --surface-2:#eaf2f7; --blue:#073b64; --blue-2:#0c5c8f; --cyan:#39b9df; --gold:#eeb54a; --line:#cbd9e2; --white:#ffffff; --shadow:0 16px 48px rgba(8,43,67,.14); }
-    @media (prefers-color-scheme: dark) { :root { --ink:#edf7fc; --muted:#b6c9d5; --paper:#08131b; --surface:#10222f; --surface-2:#173244; --blue:#0a426f; --blue-2:#3ea6d6; --cyan:#63d0ee; --gold:#f4c76d; --line:#2d4a5b; --shadow:0 18px 54px rgba(0,0,0,.28); } }
+    :root { color-scheme: light; --ink:#102231; --muted:#536979; --paper:#f6f9fb; --surface:#ffffff; --surface-2:#eaf2f7; --blue:#073b64; --blue-2:#0c5c8f; --cyan:#39b9df; --gold:#eeb54a; --line:#cbd9e2; --white:#ffffff; --shadow:0 16px 48px rgba(8,43,67,.14); }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; font-family:"Manrope",sans-serif; background:var(--paper); color:var(--ink); line-height:1.55; }
@@ -92,7 +91,7 @@
     .meet-grid { display:grid; grid-template-columns:1.4fr .8fr; gap:44px; align-items:start; }
     .meet-photos { display:grid; gap:16px; }
     .meet-photo { margin:0; max-width:240px; width:100%; }
-    .meet-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; height:100%; object-fit:cover; aspect-ratio:3/4; }
+    .meet-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; height:auto; object-fit:cover; aspect-ratio:3/4; }
     .meet-photo figcaption { color:var(--muted); font-size:.85rem; margin-top:10px; }
     .meet-copy { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:30px; }
     .meet-copy h2 { font-size:clamp(2rem,4vw,3rem); }
@@ -129,6 +128,8 @@
       .meet-photo img { aspect-ratio:1/1; border-radius:50%; height:auto; }
       .meet-photo figcaption { display:none; }
       .side-photo { max-width:240px; }
+      .award { flex-direction:column; gap:4px; padding:16px 0; }
+      .award a { white-space:normal; }
       .reason-main { min-height:320px; } .referral-grid { gap:30px; }
       .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
       footer .wrap { flex-direction:column; }
@@ -159,7 +160,7 @@
       </div>
     </div>
 
-    <section style="padding-bottom:0">
+    <section>
       <div class="wrap meet-grid">
         <div class="meet-copy">
           <h2>Meet Gus.</h2>
@@ -229,7 +230,7 @@
       </div>
     </section>
 
-    <section style="padding-top:0">
+    <section>
       <div class="wrap">
         <div class="section-head">
           <h2>What people have said about Gus.</h2>
@@ -264,7 +265,7 @@
       </div>
     </section>
 
-    <section style="padding-top:0">
+    <section>
       <div class="wrap award-grid">
         <div>
           <div class="section-head">
@@ -327,7 +328,7 @@
 
 
 
-    <section style="padding-top:0">
+    <section>
       <div class="wrap">
         <div class="section-head"><h2>Good questions to ask.</h2></div>
         <div class="faq">
