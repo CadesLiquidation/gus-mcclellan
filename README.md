@@ -16,6 +16,10 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   2026-11-09). Ask Gus for terms.
 - Photo: the dealership building photo only. No portrait of Gus is
   published here yet — add a verified photo of him when one is supplied.
+- Photos (added 2026-11-10, supplied by Cade): assets/gus-portrait.jpg
+  (B&W portrait, cropped out of the circular original, grey surround
+  removed) and assets/gus-showroom.jpg (showroom photo, straightened
+  ~6 degrees, cropped to Gus, table/car edges removed).
 
 To update: edit index.html, commit, push to main. Pages serves it at
 https://cadesliquidation.github.io/gus-mcclellan/
