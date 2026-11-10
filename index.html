@@ -86,8 +86,9 @@
     .panel .actions { margin-top:20px; }
     .copy-status { min-height:24px; margin:12px 0 0; color:var(--blue-2); font-weight:700; font-size:.9rem; }
     .visit-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
-    .meet-grid { display:grid; grid-template-columns:1fr 1fr 1.15fr; gap:22px; align-items:start; }
-    .meet-photo { margin:0; }
+    .meet-grid { display:grid; grid-template-columns:1.4fr .8fr; gap:44px; align-items:start; }
+    .meet-photos { display:grid; gap:16px; }
+    .meet-photo { margin:0; max-width:280px; width:100%; }
     .meet-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; height:100%; object-fit:cover; aspect-ratio:3/4; }
     .meet-photo figcaption { color:var(--muted); font-size:.85rem; margin-top:10px; }
     .meet-copy { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:30px; }
@@ -151,14 +152,6 @@
 
     <section style="padding-bottom:0">
       <div class="wrap meet-grid">
-        <figure class="meet-photo">
-          <img src="assets/gus-portrait.jpg" alt="Gus McClellan" />
-          <figcaption>Gus McClellan, Green Hyundai, Springfield</figcaption>
-        </figure>
-        <figure class="meet-photo">
-          <img src="assets/gus-showroom.jpg" alt="Gus McClellan in the Green Hyundai showroom" />
-          <figcaption>In the showroom at Green Hyundai</figcaption>
-        </figure>
         <div class="meet-copy">
           <h2>Meet Gus.</h2>
           <p>Gus has spent around a decade selling cars at the same store — Green Hyundai in Springfield. Most of his business is repeat customers and referrals, and that is by design: take care of people, and they come back and send their friends.</p>
@@ -167,6 +160,16 @@
             <a class="btn dark" href="tel:+12176712520">Call Gus — (217) 671-2520</a>
             <a class="btn" href="sms:+12176712520">Text Gus</a>
           </div>
+        </div>
+        <div class="meet-photos">
+          <figure class="meet-photo">
+            <img src="assets/gus-portrait.jpg" alt="Gus McClellan" />
+            <figcaption>Gus McClellan, Green Hyundai, Springfield</figcaption>
+          </figure>
+          <figure class="meet-photo">
+            <img src="assets/gus-showroom.jpg" alt="Gus McClellan in the Green Hyundai showroom" />
+            <figcaption>In the showroom at Green Hyundai</figcaption>
+          </figure>
         </div>
       </div>
     </section>
