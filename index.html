@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#073b64" />
+  <meta name="description" content="Gus McClellan sells new Hyundais, used Hyundais, and used cars from other brands at Green Hyundai in Springfield, IL. Around a decade at the same dealership. Call or text (217) 671-2520, or ask for Gus at Green Hyundai, 601 W. Stanford Ave." />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
+  <title>Gus McClellan | Green Hyundai, Springfield, IL</title>
+  <style>
+    :root { color-scheme: light dark; --ink:#102231; --muted:#536979; --paper:#f6f9fb; --surface:#ffffff; --surface-2:#eaf2f7; --blue:#073b64; --blue-2:#0c5c8f; --cyan:#39b9df; --gold:#eeb54a; --line:#cbd9e2; --white:#ffffff; --shadow:0 16px 48px rgba(8,43,67,.14); }
+    @media (prefers-color-scheme: dark) { :root { --ink:#edf7fc; --muted:#b6c9d5; --paper:#08131b; --surface:#10222f; --surface-2:#173244; --blue:#0a426f; --blue-2:#3ea6d6; --cyan:#63d0ee; --gold:#f4c76d; --line:#2d4a5b; --shadow:0 18px 54px rgba(0,0,0,.28); } }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:"Manrope",sans-serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+    a { color:inherit; } img { max-width:100%; display:block; } button,input,select,textarea { font:inherit; }
+    .wrap { width:min(1160px,calc(100% - 40px)); margin:0 auto; }
+    .hero { position:relative; min-height:640px; display:grid; align-items:end; overflow:hidden; isolation:isolate; background:#0a3555; color:var(--white); }
+    .hero::before { content:""; position:absolute; inset:0; z-index:-2; background:url("assets/dealership.jpg") center 58% / cover no-repeat; }
+    .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(3,26,43,.94) 0%,rgba(3,31,52,.79) 45%,rgba(3,28,46,.26) 80%),linear-gradient(0deg,rgba(3,25,42,.66),transparent 55%); }
+    .hero-inner { padding:88px 0 76px; max-width:700px; }
+    .tenure { display:inline-flex; align-items:center; gap:10px; margin-bottom:22px; font-size:.9rem; font-weight:700; color:#d9f4ff; }
+    .tenure::before { content:""; width:32px; height:3px; background:var(--cyan); }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:22px; font-family:"Newsreader",serif; font-weight:650; font-size:clamp(3rem,7vw,5.8rem); line-height:.95; letter-spacing:-.045em; text-wrap:balance; }
+    .hero p { max-width:610px; font-size:clamp(1.08rem,2vw,1.28rem); color:#e2eef4; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:50px; padding:0 20px; border:1px solid transparent; border-radius:9px; background:var(--cyan); color:#06283e; font-weight:800; text-decoration:none; cursor:pointer; }
+    .btn:hover { background:#74d6ef; }
+    .btn.secondary { background:rgba(255,255,255,.08); color:#fff; border-color:rgba(255,255,255,.46); }
+    .btn.secondary:hover { background:rgba(255,255,255,.16); }
+    .btn.dark { background:var(--blue); color:#fff; }
+    .btn.dark:hover { background:var(--blue-2); }
+    .proof { margin-top:-30px; position:relative; z-index:2; }
+    .proof-grid { display:grid; grid-template-columns:repeat(3,1fr); background:var(--surface); box-shadow:var(--shadow); border-radius:14px; overflow:hidden; }
+    .proof-item { padding:28px 30px; }
+    .proof-item + .proof-item { border-left:1px solid var(--line); }
+    .proof strong { display:block; font-family:"Newsreader",serif; font-size:1.65rem; line-height:1.1; margin-bottom:5px; color:var(--blue-2); }
+    .proof span { color:var(--muted); font-size:.92rem; }
+    section { padding:88px 0; }
+    .section-head { max-width:720px; margin-bottom:46px; }
+    h2 { font-family:"Newsreader",serif; font-size:clamp(2.25rem,4.8vw,4rem); line-height:1; letter-spacing:-.035em; margin-bottom:18px; text-wrap:balance; }
+    .section-head p { color:var(--muted); font-size:1.08rem; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .card { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:26px; }
+    .card h3 { font-size:1.15rem; margin-bottom:8px; }
+    .card p { margin-bottom:0; color:var(--muted); }
+    .card .tag { display:inline-block; font-size:.78rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--blue-2); margin-bottom:10px; }
+    .reasons { display:grid; grid-template-columns:1.15fr .85fr; gap:22px; }
+    .reason-main,.reason-stack > article { background:var(--surface); border:1px solid var(--line); }
+    .reason-main { padding:clamp(30px,5vw,58px); border-radius:18px 5px 18px 5px; display:flex; flex-direction:column; justify-content:space-between; min-height:380px; }
+    .reason-main .quote { font-family:"Newsreader",serif; font-size:clamp(1.9rem,4vw,3.1rem); line-height:1.07; letter-spacing:-.03em; }
+    .reason-main p:last-child { color:var(--muted); margin-bottom:0; max-width:510px; }
+    .reason-stack { display:grid; gap:22px; }
+    .reason-stack > article { padding:30px; border-radius:5px 18px 5px 18px; }
+    .reason-stack h3 { font-size:1.15rem; margin-bottom:8px; }
+    .reason-stack p { margin-bottom:0; color:var(--muted); }
+    .referral { background:var(--blue); color:#fff; position:relative; overflow:hidden; }
+    .referral-grid { display:grid; grid-template-columns:1fr .8fr; gap:70px; align-items:center; position:relative; z-index:1; }
+    .referral h2 { max-width:670px; }
+    .referral p { color:#d7e9f3; max-width:650px; font-size:1.08rem; }
+    .steps { list-style:none; padding:0; margin:0; counter-reset:steps; }
+    .steps li { counter-increment:steps; display:grid; grid-template-columns:42px 1fr; gap:16px; align-items:start; padding:18px 0; border-bottom:1px solid rgba(255,255,255,.2); }
+    .steps li::before { content:counter(steps,decimal-leading-zero); font-weight:800; color:var(--gold); }
+    .steps strong { display:block; margin-bottom:2px; }
+    .steps span { color:#cae0eb; font-size:.91rem; }
+    .matcher { background:var(--surface-2); }
+    .matcher-grid { display:grid; grid-template-columns:.78fr 1.22fr; gap:60px; align-items:start; }
+    .matcher-copy { position:sticky; top:24px; }
+    .matcher-copy p { color:var(--muted); }
+    .panel { background:var(--surface); padding:clamp(24px,4vw,42px); border:1px solid var(--line); border-radius:16px 5px 16px 5px; box-shadow:var(--shadow); }
+    .fields { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    label { display:grid; gap:7px; font-weight:700; font-size:.91rem; }
+    label.full { grid-column:1 / -1; }
+    input,select,textarea { width:100%; border:1px solid var(--line); border-radius:7px; background:var(--paper); color:var(--ink); padding:13px 14px; outline:none; }
+    input:focus,select:focus,textarea:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(57,185,223,.24); }
+    textarea { min-height:128px; resize:vertical; }
+    .panel .actions { margin-top:20px; }
+    .copy-status { min-height:24px; margin:12px 0 0; color:var(--blue-2); font-weight:700; font-size:.9rem; }
+    .visit-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+    .address-card { padding:32px; background:var(--surface); border-top:5px solid var(--cyan); box-shadow:var(--shadow); }
+    .address-card h3 { font-family:"Newsreader",serif; font-size:2rem; margin-bottom:12px; }
+    .address-card p { color:var(--muted); }
+    .small { font-size:.8rem; color:var(--muted); margin-top:22px; }
+    .faq { display:grid; gap:0; }
+    details { border-top:1px solid var(--line); padding:20px 0; }
+    details:last-child { border-bottom:1px solid var(--line); }
+    summary { cursor:pointer; font-weight:800; list-style:none; display:flex; justify-content:space-between; gap:16px; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:"+"; color:var(--blue-2); font-size:1.4rem; line-height:1; }
+    details[open] summary::after { content:"−"; }
+    details p { color:var(--muted); max-width:760px; margin:12px 0 0; }
+    footer { padding:32px 0 46px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
+    footer .wrap { display:flex; justify-content:space-between; gap:24px; align-items:start; }
+    footer p { margin:0; max-width:720px; }
+    footer a { color:var(--blue-2); font-weight:700; }
+    @media (max-width:760px) {
+      .wrap { width:min(100% - 28px,1160px); }
+      .hero { min-height:600px; }
+      .hero-inner { padding:120px 0 64px; }
+      h1 { font-size:clamp(2.8rem,15vw,4.4rem); }
+      .actions { display:grid; } .btn { width:100%; }
+      .proof { margin-top:0; } .proof-grid { grid-template-columns:1fr; border-radius:0 0 12px 12px; }
+      .proof-item { padding:22px 24px; } .proof-item + .proof-item { border-left:0; border-top:1px solid var(--line); }
+      section { padding:64px 0; }
+      .cards { grid-template-columns:1fr; }
+      .reasons,.referral-grid,.matcher-grid,.visit-grid { grid-template-columns:1fr; }
+      .reason-main { min-height:320px; } .referral-grid { gap:30px; }
+      .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
+      footer .wrap { flex-direction:column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="tenure">Around a decade at Green Hyundai in Springfield</div>
+      <h1>Gus McClellan — your Hyundai guy in Springfield.</h1>
+      <p>A straightforward car-buying experience built on repeat customers, referrals, and one person you can call before, during, and after the sale. New Hyundai, used Hyundai, or a used car from another brand — Gus can get it.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+12176712520">Call Gus — (217) 671-2520</a>
+        <a class="btn secondary" href="sms:+12176712520">Text Gus</a>
+        <a class="btn secondary" href="#car-match">Tell me what you need</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="proof" aria-label="Experience highlights">
+      <div class="wrap proof-grid">
+        <div class="proof-item"><strong>Around a decade</strong><span>Serving buyers at the same dealership</span></div>
+        <div class="proof-item"><strong>Repeat customers</strong><span>A relationship that lasts past delivery day</span></div>
+        <div class="proof-item"><strong>Referral rewards</strong><span>$200 cash when your referral buys</span></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Skip the shuffle. Work with someone you know.</h2>
+          <p>Whether this is your first Hyundai or your fourth, you deserve clear answers, a comfortable pace, and a salesperson who remembers you after the keys change hands.</p>
+        </div>
+        <div class="reasons">
+          <article class="reason-main">
+            <p class="quote">“The best compliment is when a customer comes back — or sends someone they care about.”</p>
+            <p>That is the whole approach: earn the next conversation by taking care of this one.</p>
+          </article>
+          <div class="reason-stack">
+            <article>
+              <h3>Start with your needs, not a stock number</h3>
+              <p>Share the features, budget range, and timing that matter. Gus will help narrow the choices before you make the drive.</p>
+            </article>
+            <article>
+              <h3>New, used, any brand — one point of contact</h3>
+              <p>New Hyundai, used Hyundai, or a used car from another brand — ask Gus first. He can check the lot, line up a test drive, or help with a trade-in without you starting over with someone new.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What people have said about Gus.</h2>
+          <p>Reviews from customers on DealerRater, naming Gus at Green Hyundai. Read the full reviews there — these are short excerpts.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <p>“Our Salesman Gus McClellan was amazing! No pressure, but just answered every question I asked in a polite and professional manner and was never pushy.”</p>
+            <p class="small">— KEN9022, DealerRater, January 2016</p>
+          </article>
+          <article class="card">
+            <p>“Gus McClellan is the best salesman ever! I love Green Hyundai and will never go anywhere else.”</p>
+            <p class="small">— crfycreations2, DealerRater, September 2017</p>
+          </article>
+          <article class="card">
+            <p>“Gus took great care of us. We are repeat customers and plan on using Gus at Green in the future.”</p>
+            <p class="small">— adam_cpa, DealerRater, July 2022</p>
+          </article>
+          <article class="card">
+            <p>“Gus stayed in contact the entire time and even rearranged his schedule to get me this car. We were able to get exactly what we wanted.”</p>
+            <p class="small">— Noahjosephyt, DealerRater, June 2022</p>
+          </article>
+          <article class="card">
+            <p>“Gus is great to work with and was not pushy. I felt like they communicated well with me and found a car that fit my needs and budget.”</p>
+            <p class="small">— cms881591, DealerRater, April 2017</p>
+          </article>
+          <article class="card">
+            <h3>See more reviews</h3>
+            <p>Green Hyundai has over 1,300 reviews on DealerRater. <a href="https://www.dealerrater.com/dealer/Green-Hyundai-review-23539/" target="_blank" rel="noopener">Read them on DealerRater ↗</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="referral">
+      <div class="wrap referral-grid">
+        <div>
+          <h2>Know someone shopping? Send them Gus's way.</h2>
+          <p>Introductions matter. When your friend or family member purchases, Gus offers a <strong>$200 cash referral bonus</strong> as a thank-you. Message him for the terms.</p>
+          <p>And if you buy a car from Gus, you also get 15% off at both family businesses — Cade's Liquidation and Lace &amp; Hide Mercantile. <a href="https://cadesliquidation.com/family/" target="_blank" rel="noopener">See the family deals ↗</a></p>
+          <div class="actions">
+            <a class="btn" href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Make a referral on Facebook <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><div><strong>Introduce us</strong><span>Send a group message or have them mention your name.</span></div></li>
+          <li><div><strong>Gus helps them shop</strong><span>They get the same direct, no-pressure experience.</span></div></li>
+          <li><div><strong>You get thanked</strong><span>If they purchase, Gus will follow up about your $200 referral bonus.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>New or used — Gus finds the car.</h2>
+          <p>That is the part people miss: Gus is not just a new-Hyundai guy. He sells new Hyundais, used Hyundais, and used cars from other brands too — all through Green Hyundai's inventory. No live listings here on purpose — inventory, prices, and offers change daily, and the dealership's own site is the only place that stays current. Tell Gus what you are after and he will tell you honestly what is on the lot, what is coming in, or what he can track down.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><span class="tag">New</span><h3>New Hyundai</h3><p>The full new lineup — Venue and Kona, Tucson, Santa Fe, Palisade, Elantra and Sonata, Santa Cruz, and the electric IONIQ models. Gas, hybrid, plug-in hybrid, and EV.</p></article>
+          <article class="card"><span class="tag">Used</span><h3>Used Hyundai</h3><p>Pre-owned Hyundais, including Hyundai Certified Used vehicles. Same store, same person to call if anything comes up after the sale.</p></article>
+          <article class="card"><span class="tag">Used</span><h3>Used — any brand</h3><p>Green Hyundai's pre-owned lot is not just Hyundais. It regularly carries Chevrolet, Ford, Toyota, Jeep, Nissan, and more — the mix changes constantly, so check the live inventory or just ask Gus what is there right now.</p></article>
+        </div>
+        <p class="small">Not sure which way to go — new, used Hyundai, or used something else? That is exactly what the form below is for. Tell Gus your routine, your budget, and what you drive now, and he will narrow it down. Hyundai backs its new vehicles with a 10-year / 100,000-mile powertrain limited warranty — see <a href="https://www.hyundaiusa.com/" target="_blank" rel="noopener">hyundaiusa.com</a> for the current warranty details.</p>
+        <div class="actions">
+          <a class="btn dark" href="https://www.greenhyundai.com/all-inventory/index.htm" target="_blank" rel="noopener">Browse Green Hyundai's current inventory — new &amp; used <span aria-hidden="true">↗</span></a>
+          <a class="btn" href="https://www.greenhyundai.com/" target="_blank" rel="noopener">greenhyundai.com <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="matcher" id="car-match">
+      <div class="wrap matcher-grid">
+        <div class="matcher-copy">
+          <h2>Make the first message easy.</h2>
+          <p>Choose what matters and this page will write a clean request you can copy into Facebook Messenger or a text to Gus. No commitment — just a better starting point. You can also just call or text him directly at <a href="tel:+12176712520">(217) 671-2520</a>.</p>
+        </div>
+        <div class="panel">
+          <div class="fields">
+            <label>Vehicle type
+              <select id="vehicle">
+                <option value="an SUV">SUV</option>
+                <option value="a sedan">Sedan</option>
+                <option value="an EV or hybrid">EV or hybrid</option>
+                <option value="a three-row vehicle">Three-row vehicle</option>
+                <option value="a truck">Truck (Santa Cruz)</option>
+                <option value="something flexible">Not sure yet</option>
+              </select>
+            </label>
+            <label>New or used
+              <select id="condition">
+                <option value="new">New</option>
+                <option value="used">Used</option>
+                <option value="new or used">Either</option>
+              </select>
+            </label>
+            <label>Monthly budget or price range
+              <input id="budget" type="text" inputmode="decimal" placeholder="Example: around $450/month" />
+            </label>
+            <label>Shopping timeline
+              <select id="timeline">
+                <option value="this week">This week</option>
+                <option value="this month">This month</option>
+                <option value="in the next few months">Next few months</option>
+                <option value="just researching for now">Just researching</option>
+              </select>
+            </label>
+            <label class="full">Your message
+              <textarea id="message" aria-describedby="copy-status"></textarea>
+            </label>
+          </div>
+          <div class="actions">
+            <button class="btn dark" type="button" id="copy">Copy request</button>
+            <a class="btn" href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Open Facebook <span aria-hidden="true">↗</span></a>
+          </div>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap visit-grid">
+        <div>
+          <div class="section-head">
+            <h2>Ready when you are.</h2>
+            <p>Browse the dealership's current inventory, then message Gus before you visit. He can help line up the right vehicles and a good time to drive them. Ask for Gus when you arrive.</p>
+          </div>
+          <div class="actions">
+            <a class="btn dark" href="https://www.greenhyundai.com/all-inventory/index.htm" target="_blank" rel="noopener">Browse current inventory — new &amp; used <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="tel:+12175251370">Call Green Hyundai — (217) 525-1370</a>
+          </div>
+        </div>
+        <aside class="address-card">
+          <h3>Green Hyundai</h3>
+          <p>601 W. Stanford Ave.<br>Springfield, IL 62704</p>
+          <p>Sales: <a href="tel:+12175251370">(217) 525-1370</a><br>Gus direct: <a href="tel:+12176712520">(217) 671-2520</a><br><a href="https://www.greenhyundai.com/" target="_blank" rel="noopener">greenhyundai.com <span aria-hidden="true">↗</span></a></p>
+          <p>Showroom hours: Mon–Fri 9:00 AM–7:00 PM, Sat 9:00 AM–6:00 PM, Sun closed.</p>
+          <p class="small">Dealership inventory, prices, incentives, and availability are maintained by Green Hyundai and may change. Check greenhyundai.com for current details.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><h2>Good questions to ask.</h2></div>
+        <div class="faq">
+          <details>
+            <summary>Do I need to know which Hyundai I want?</summary>
+            <p>No. Start with your routine, must-have features, budget, and how many people or how much cargo you carry. That is enough to narrow the field.</p>
+          </details>
+          <details>
+            <summary>Can Gus help with a trade-in?</summary>
+            <p>Yes. Send the year, make, model, mileage, and a few honest details about condition, and he can help you understand the next step.</p>
+          </details>
+          <details>
+            <summary>Can I work with Gus if I found a car on the dealership site?</summary>
+            <p>Absolutely. Send the vehicle link or stock number through Facebook or text and he can help confirm the next step with that vehicle.</p>
+          </details>
+          <details>
+            <summary>How does the referral bonus work?</summary>
+            <p>Introduce someone who is shopping and have them mention your name. If they purchase, Gus will follow up with your $200 cash bonus and any applicable terms.</p>
+          </details>
+          <details>
+            <summary>Does Gus also sell used cars?</summary>
+            <p>Yes — and not just used Hyundais. Green Hyundai keeps a large pre-owned inventory alongside new Hyundais, including Hyundai Certified Used vehicles and used cars from other brands like Chevrolet, Ford, Toyota, and Jeep. The message form above lets you pick new, used, or either, and Gus can tell you what is actually on the lot right now.</p>
+          </details>
+          <details>
+            <summary>What if I want a specific used car that is not on the lot?</summary>
+            <p>Tell Gus the year, make, model, and budget. He can check what is coming in, what he can track down, or what is close enough to be worth a look — and he will tell you straight if it is not a good fit.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>This is Gus McClellan's personal sales page. It is not the official Green Hyundai or Hyundai Motor America website, and it is not affiliated with or endorsed by Hyundai Motor America. Hyundai and Hyundai model names are registered trademarks of Hyundai Motor Company / Hyundai Motor America. All rights reserved. No Hyundai logos, vehicle photos, prices, or inventory are published here — for current inventory, pricing, and offers, see greenhyundai.com.</p>
+      <a href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Gus on Facebook <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var vehicle = document.getElementById('vehicle');
+      var condition = document.getElementById('condition');
+      var budget = document.getElementById('budget');
+      var timeline = document.getElementById('timeline');
+      var message = document.getElementById('message');
+      var copy = document.getElementById('copy');
+      var status = document.getElementById('copy-status');
+      function buildMessage() {
+        var budgetText = budget.value.trim() ? ' My budget is ' + budget.value.trim() + '.' : '';
+        message.value = 'Hi Gus! I\u2019m looking for ' + vehicle.value + ', preferably ' + condition.value + '.' + budgetText + ' I\u2019m hoping to buy ' + timeline.value + '. Can you help me narrow down some options?';
+        status.textContent = '';
+      }
+      [vehicle, condition, budget, timeline].forEach(function (field) {
+        field.addEventListener(field === budget ? 'input' : 'change', buildMessage);
+      });
+      copy.addEventListener('click', function () {
+        buildMessage();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(message.value).then(function () {
+            status.textContent = 'Copied \u2014 paste it into your Facebook message or text to Gus.';
+          }).catch(function () {
+            message.focus(); message.select();
+            status.textContent = 'Select the message above and copy it.';
+          });
+        } else {
+          message.focus(); message.select();
+          status.textContent = 'Select the message above and copy it.';
+        }
+      });
+      buildMessage();
+    })();
+  </script>
+</body>
+</html>
