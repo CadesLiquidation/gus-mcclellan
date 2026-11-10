@@ -32,7 +32,11 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   + `#reviews-toggle`); review quotes render in ink, not muted gray.
 - Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
   Family, one row on mobile. Current page link is highlighted cyan
-  (`.topnav a.current`); remember to set it on each page.
+  (`.topnav a.current`); remember to set it on each page. Smart header
+  (`assets/nav.js`, included on all pages): hides on scroll down, pops
+  back on scroll up; solid navy once scrolled, transparent over the hero
+  only at the very top. Anchor sections get `scroll-margin-top:70px` so
+  the fixed nav never covers a jumped-to heading.
 - Full pass (2026-11-10): SOTM section structure repaired — my reviews
   reorder had silently eaten the section open + heading/intro (divs went
   36/38); always run the HTML parser balance check after block edits.
