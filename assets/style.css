@@ -88,6 +88,20 @@
     footer .wrap { display:flex; justify-content:space-between; gap:24px; align-items:start; }
     footer p { margin:0; max-width:720px; }
     footer a { color:var(--blue-2); font-weight:700; }
+    .topnav { background:var(--blue); color:#fff; }
+    .topnav.over-hero { position:absolute; top:0; left:0; right:0; background:transparent; z-index:5; }
+    .topnav .wrap { display:flex; align-items:center; gap:8px 26px; flex-wrap:wrap; padding-top:12px; padding-bottom:12px; }
+    .topnav a { color:#fff; text-decoration:none; font-weight:700; font-size:.92rem; }
+    .topnav a.brand { font-family:"Newsreader",serif; font-size:1.25rem; font-weight:650; margin-right:auto; }
+    .topnav a:hover { color:var(--cyan); }
+    .page-head { padding:72px 0 8px; }
+    .page-head h1 { font-size:clamp(2.6rem,6vw,4rem); }
+    .page-head p { color:var(--muted); max-width:720px; font-size:1.08rem; }
+    .page-head .kicker { font-size:.85rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--blue-2); margin-bottom:10px; }
+    .offer { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:26px; }
+    .offer h3 { font-size:1.15rem; margin-bottom:8px; }
+    .offer p { margin-bottom:0; color:var(--muted); }
+    .offer .deal { display:block; font-family:"Newsreader",serif; font-size:1.9rem; line-height:1.1; color:var(--blue-2); margin-bottom:8px; }
     @media (max-width:760px) {
       .wrap { width:min(100% - 28px,1160px); }
       .hero { min-height:600px; }
@@ -105,21 +119,7 @@
       .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
       .topnav .wrap { flex-wrap:nowrap; overflow-x:auto; gap:20px; }
       .topnav a { font-size:.85rem; white-space:nowrap; }
-      .topnav a.brand { font-size:1.1rem; }
+      .topnav a.brand { font-size:1.1rem; margin-right:0; }
       footer .wrap { flex-direction:column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
-    .topnav { background:var(--blue); color:#fff; }
-    .topnav.over-hero { position:absolute; top:0; left:0; right:0; background:transparent; z-index:5; }
-    .topnav .wrap { display:flex; align-items:center; gap:8px 26px; flex-wrap:wrap; padding-top:12px; padding-bottom:12px; }
-    .topnav a { color:#fff; text-decoration:none; font-weight:700; font-size:.92rem; }
-    .topnav a.brand { font-family:"Newsreader",serif; font-size:1.25rem; font-weight:650; margin-right:auto; }
-    .topnav a:hover { color:var(--cyan); }
-    .page-head { padding:72px 0 8px; }
-    .page-head h1 { font-size:clamp(2.6rem,6vw,4rem); }
-    .page-head p { color:var(--muted); max-width:720px; font-size:1.08rem; }
-    .page-head .kicker { font-size:.85rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--blue-2); margin-bottom:10px; }
-    .offer { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:26px; }
-    .offer h3 { font-size:1.15rem; margin-bottom:8px; }
-    .offer p { margin-bottom:0; color:var(--muted); }
-    .offer .deal { display:block; font-family:"Newsreader",serif; font-size:1.9rem; line-height:1.1; color:var(--blue-2); margin-bottom:8px; }
