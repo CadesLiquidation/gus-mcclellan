@@ -268,7 +268,7 @@
       <div class="wrap matcher-grid">
         <div class="matcher-copy">
           <h2>Make the first message easy.</h2>
-          <p>Choose what matters and this page will write a clean request you can copy into Facebook Messenger or a text to Gus. No commitment — just a better starting point. You can also just call or text him directly at <a href="tel:+12176712520">(217) 671-2520</a>.</p>
+          <p>Choose what matters and this page will write a clean request for you. Tap <strong>Text Gus this request</strong> and it opens a text to him at (217) 671-2520 with the message already written — just hit send. No commitment — just a better starting point. You can also just call or text him directly at <a href="tel:+12176712520">(217) 671-2520</a>.</p>
         </div>
         <div class="panel">
           <div class="fields">
@@ -305,7 +305,8 @@
             </label>
           </div>
           <div class="actions">
-            <button class="btn dark" type="button" id="copy">Copy request</button>
+            <a class="btn dark" id="sms-send" href="sms:+12176712520?&amp;body=Hi%20Gus!">Text Gus this request</a>
+            <button class="btn" type="button" id="copy">Copy request</button>
             <a class="btn" href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Open Facebook <span aria-hidden="true">↗</span></a>
           </div>
           <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
@@ -383,10 +384,13 @@
       var timeline = document.getElementById('timeline');
       var message = document.getElementById('message');
       var copy = document.getElementById('copy');
+      var smsSend = document.getElementById('sms-send');
       var status = document.getElementById('copy-status');
       function buildMessage() {
         var budgetText = budget.value.trim() ? ' My budget is ' + budget.value.trim() + '.' : '';
         message.value = 'Hi Gus! I\u2019m looking for ' + vehicle.value + ', preferably ' + condition.value + '.' + budgetText + ' I\u2019m hoping to buy ' + timeline.value + '. Can you help me narrow down some options?';
+        // Prefill a text to Gus: sms:?&body= works on iPhone, sms:?body= on Android — the ?& form covers both.
+        smsSend.setAttribute('href', 'sms:+12176712520?&body=' + encodeURIComponent(message.value));
         status.textContent = '';
       }
       [vehicle, condition, budget, timeline].forEach(function (field) {
