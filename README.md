@@ -30,6 +30,19 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   Taylor Upshaw, Brian/John, Adam) were left out. Homepage shows the 3
   most recent with a "View all 14 reviews" toggle (JS, `#reviews-grid`
   + `#reviews-toggle`); review quotes render in ink, not muted gray.
+- About page (2026-11-10): personal rewrite from Cade — Gus is a father
+  of five kids, two dogs, one cat; loves family vacations; selling cars
+  at Green Hyundai since 2015, started at the bottom and worked his way
+  up, Salesman of the Month many times. Four brothers, most in car sales
+  past or present, following their father who served thousands at Green
+  Hyundai. Photos (all supplied by Cade, resized to 1200px max):
+  `gus-jana.jpg` (Gus + Jana selfie), `gus-brothers-parents.jpg` (Gus
+  with his four brothers and parents), `gus-family-formal.jpg` and
+  `gus-family-garden.jpg` (vacation gallery, `.photo-grid` — 2 cols
+  desktop, stacks on mobile). CSS-ordering lesson, again: base rules
+  must sit BEFORE the media query or mobile overrides lose — the
+  photo-grid base rule was appended after it and the gallery stayed
+  2-col on phones until moved.
 - How It Works (2026-11-10): 5-step section on the homepage between the
   message builder and reviews (Tell Gus what you need → He narrows it
   down → See it and drive it → Trade-in → Drive it home). Idea from
