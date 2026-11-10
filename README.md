@@ -65,6 +65,7 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   `dealership.jpg`). Referenced in `assets/style.css` `.hero::before`
   (`center 58% / cover`). New filename used so cached copies of the old
   photo don't linger.
+- Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
   Family, one row on mobile. Current page link is highlighted cyan
   (`.topnav a.current`); remember to set it on each page. Smart header
   (`assets/nav.js`, included on all pages): hides on scroll down, pops
