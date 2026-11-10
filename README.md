@@ -27,9 +27,23 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   DealerRater reviews (Jul 2022 back to Jan 2016). Months are approximate,
   worked out from the screenshots' relative dates. New reviews go at the
   top. Reviews naming other salespeople (Doug Bishop, John McCarthy,
-  Taylor Upshaw, Brian/John, Adam) were left out.
+  Taylor Upshaw, Brian/John, Adam) were left out. Homepage shows the 3
+  most recent with a "View all 14 reviews" toggle (JS, `#reviews-grid`
+  + `#reviews-toggle`); review quotes render in ink, not muted gray.
 - Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
-  Family, one row on mobile.
+  Family, one row on mobile. Current page link is highlighted cyan
+  (`.topnav a.current`); remember to set it on each page.
+- Full pass (2026-11-10): SOTM section structure repaired — my reviews
+  reorder had silently eaten the section open + heading/intro (divs went
+  36/38); always run the HTML parser balance check after block edits.
+  Referral steps were unreadable on light pages (pale-blue text on white)
+  — light step colors are now scoped to `.referral .steps` only. Footer
+  stacks vertically (was 3 squeezed columns on desktop). About page got
+  a reasons block (quote + 3 items, all grounded in existing copy) using
+  the previously unused `.reasons` CSS. Referrals page's family-deal line
+  is now an offer card. Footer disclaimer no longer claims "no vehicle
+  photos" (the hero is a dealership photo). Homepage copy fix: the
+  message form is ABOVE the New/Used section, not below it.
 - Mobile check (2026-11-10): render the live page at 390px with
   Playwright before announcing a mobile fix — `npx playwright install
   chromium` (no --with-deps), `playwright-core` in /tmp, download the
