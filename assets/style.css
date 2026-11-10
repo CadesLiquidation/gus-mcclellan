@@ -117,9 +117,9 @@
                 .award { flex-direction:column; gap:4px; padding:16px 0; }
       .reason-main { min-height:320px; } .referral-grid { gap:30px; }
       .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
-      .topnav .wrap { flex-wrap:nowrap; overflow-x:auto; gap:20px; }
+      .topnav .wrap { flex-wrap:wrap; gap:8px 0; justify-content:space-between; }
       .topnav a { font-size:.85rem; white-space:nowrap; }
-      .topnav a.brand { font-size:1.1rem; margin-right:0; }
+      .topnav a.brand { flex:1 1 100%; font-size:1.15rem; margin-right:0; }
       footer .wrap { flex-direction:column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
