@@ -63,7 +63,7 @@
       <div class="wrap matcher-grid">
         <div class="matcher-copy">
           <h2>Make the first message easy.</h2>
-          <p>Choose what matters and this page will write a clean request for you. Tap <strong>Text Gus this request</strong> and it opens a text to him at (217) 671-2520 with the message already written — just hit send. No commitment — just a better starting point. You can also just call or text him directly at <a href="tel:+12176712520">(217) 671-2520</a>.</p>
+          <p>Choose what matters and this page will write a clean request for you. Tap <strong>Text Gus this request</strong> and it opens a text to him at (217) 671-2520 with the message already written — just hit send. On a computer, <strong>Email Gus this request</strong> opens your mail app with the same message ready to send. No commitment — just a better starting point. You can also just call or text him directly at <a href="tel:+12176712520">(217) 671-2520</a>.</p>
         </div>
         <div class="panel">
           <div class="fields">
@@ -101,6 +101,7 @@
           </div>
           <div class="actions">
             <a class="btn dark" id="sms-send" href="sms:+12176712520?&amp;body=Hi%20Gus!">Text Gus this request</a>
+            <a class="btn" id="email-send" href="mailto:gus.mcclellan@greenfamilystores.net?subject=Car%20shopping%20request&amp;body=Hi%20Gus!">Email Gus this request</a>
             <button class="btn" type="button" id="copy">Copy request</button>
           </div>
           <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
@@ -321,12 +322,14 @@
       var message = document.getElementById('message');
       var copy = document.getElementById('copy');
       var smsSend = document.getElementById('sms-send');
+      var emailSend = document.getElementById('email-send');
       var status = document.getElementById('copy-status');
       function buildMessage() {
         var budgetText = budget.value.trim() ? ' My budget is ' + budget.value.trim() + '.' : '';
         message.value = 'Hi Gus! I\u2019m looking for ' + vehicle.value + ', preferably ' + condition.value + '.' + budgetText + ' I\u2019m hoping to buy ' + timeline.value + '. Can you help me narrow down some options?';
         // Prefill a text to Gus: sms:?&body= works on iPhone, sms:?body= on Android — the ?& form covers both.
         smsSend.setAttribute('href', 'sms:+12176712520?&body=' + encodeURIComponent(message.value));
+        emailSend.setAttribute('href', 'mailto:gus.mcclellan@greenfamilystores.net?subject=' + encodeURIComponent('Car shopping request') + '&body=' + encodeURIComponent(message.value));
         status.textContent = '';
       }
       [vehicle, condition, budget, timeline].forEach(function (field) {
