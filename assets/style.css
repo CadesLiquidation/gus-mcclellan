@@ -107,6 +107,11 @@
     .offer h3 { font-size:1.15rem; margin-bottom:8px; }
     .offer p { margin-bottom:0; color:var(--muted); }
     .offer .deal { display:block; font-family:"Newsreader",serif; font-size:1.9rem; line-height:1.1; color:var(--blue-2); margin-bottom:8px; }
+    .photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    figure { margin:0; }
+    figure img { border-radius:14px; width:100%; }
+    figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
+    .about-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; }
     @media (max-width:760px) {
       .wrap { width:min(100% - 28px,1160px); }
       .hero { min-height:600px; }
@@ -132,8 +137,3 @@
     #reviews-grid .card > p:first-child { color:var(--ink); }
     .card.extra { display:none; }
     .cards.expanded .card.extra { display:block; }
-    .photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-    figure { margin:0; }
-    figure img { border-radius:14px; width:100%; }
-    figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
-    .about-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; }
