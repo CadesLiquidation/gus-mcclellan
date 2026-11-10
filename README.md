@@ -64,7 +64,10 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   Cade supplied 2026-11-10 (replaced the blurry original
   `dealership.jpg`). Referenced in `assets/style.css` `.hero::before`
   (`center 58% / cover`). New filename used so cached copies of the old
-  photo don't linger.
+  photo don't linger. 2026-11-10: slight `filter:blur(3px)` on the hero
+  photo (with `inset:-10px` so the blur doesn't show hard edges) so the
+  headline stands out more; homepage stylesheet link bumped to
+  `style.css?v=2` to bust cached CSS.
 - Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
   Family, one row on mobile. Current page link is highlighted cyan
   (`.topnav a.current`); remember to set it on each page. Smart header
