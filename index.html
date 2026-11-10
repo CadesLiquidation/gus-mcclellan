@@ -11,121 +11,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
   <title>Gus McClellan | Green Hyundai, Springfield, IL</title>
-  <style>
-    :root { color-scheme: light; --ink:#102231; --muted:#536979; --paper:#f6f9fb; --surface:#ffffff; --surface-2:#eaf2f7; --blue:#073b64; --blue-2:#0c5c8f; --cyan:#39b9df; --gold:#eeb54a; --line:#cbd9e2; --white:#ffffff; --shadow:0 16px 48px rgba(8,43,67,.14); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:"Manrope",sans-serif; background:var(--paper); background-image:radial-gradient(rgba(12,92,143,.10) 1px, transparent 1.4px); background-size:22px 22px; color:var(--ink); line-height:1.55; }
-    a { color:inherit; } img { max-width:100%; display:block; } button,input,select,textarea { font:inherit; }
-    .wrap { width:min(1160px,calc(100% - 40px)); margin:0 auto; }
-    .hero { position:relative; min-height:640px; display:grid; align-items:end; overflow:hidden; isolation:isolate; background:#0a3555; color:var(--white); }
-    .hero::before { content:""; position:absolute; inset:0; z-index:-2; background:url("assets/dealership.jpg") center 58% / cover no-repeat; }
-    .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(3,26,43,.94) 0%,rgba(3,31,52,.79) 45%,rgba(3,28,46,.26) 80%),linear-gradient(0deg,rgba(3,25,42,.66),transparent 55%); }
-    .hero-inner { padding:88px 0 76px; max-width:700px; }
-    .tenure { display:inline-flex; align-items:center; gap:10px; margin-bottom:22px; font-size:.9rem; font-weight:700; color:#d9f4ff; }
-    .tenure::before { content:""; width:32px; height:3px; background:var(--cyan); }
-    h1,h2,h3,p { margin-top:0; }
-    h1 { margin-bottom:22px; font-family:"Newsreader",serif; font-weight:650; font-size:clamp(3rem,7vw,5.8rem); line-height:.95; letter-spacing:-.045em; text-wrap:balance; }
-    .hero p { max-width:610px; font-size:clamp(1.08rem,2vw,1.28rem); color:#e2eef4; }
-    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:50px; padding:0 20px; border:1px solid transparent; border-radius:9px; background:var(--cyan); color:#06283e; font-weight:800; text-decoration:none; cursor:pointer; }
-    .btn:hover { background:#74d6ef; }
-    .btn.secondary { background:rgba(255,255,255,.08); color:#fff; border-color:rgba(255,255,255,.46); }
-    .btn.secondary:hover { background:rgba(255,255,255,.16); }
-    .btn.dark { background:var(--blue); color:#fff; }
-    .btn.dark:hover { background:var(--blue-2); }
-    .proof { margin-top:-30px; position:relative; z-index:2; }
-    .proof-grid { display:grid; grid-template-columns:repeat(3,1fr); background:var(--surface); box-shadow:var(--shadow); border-radius:14px; overflow:hidden; }
-    .proof-item { padding:28px 30px; }
-    .proof-item + .proof-item { border-left:1px solid var(--line); }
-    .proof strong { display:block; font-family:"Newsreader",serif; font-size:1.65rem; line-height:1.1; margin-bottom:5px; color:var(--blue-2); }
-    .proof span { color:var(--muted); font-size:.92rem; }
-    section { padding:88px 0; }
-    .section-head { max-width:720px; margin-bottom:46px; }
-    .award { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:baseline; padding:18px 0; border-top:1px solid var(--line); }
-    .award:last-of-type { border-bottom:1px solid var(--line); }
-    .award strong { font-size:1.15rem; }
-    .award a { white-space:nowrap; }
-    h2 { font-family:"Newsreader",serif; font-size:clamp(2.25rem,4.8vw,4rem); line-height:1; letter-spacing:-.035em; margin-bottom:18px; text-wrap:balance; }
-    .section-head p { color:var(--muted); font-size:1.08rem; }
-    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-    .card { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:26px; }
-    .card h3 { font-size:1.15rem; margin-bottom:8px; }
-    .card p { margin-bottom:0; color:var(--muted); }
-    .card .tag { display:inline-block; font-size:.78rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--blue-2); margin-bottom:10px; }
-    .reasons { display:grid; grid-template-columns:1.15fr .85fr; gap:22px; }
-    .reason-main,.reason-stack > article { background:var(--surface); border:1px solid var(--line); }
-    .reason-main { padding:clamp(30px,5vw,58px); border-radius:18px 5px 18px 5px; display:flex; flex-direction:column; justify-content:space-between; min-height:380px; }
-    .reason-main .quote { font-family:"Newsreader",serif; font-size:clamp(1.9rem,4vw,3.1rem); line-height:1.07; letter-spacing:-.03em; }
-    .reason-main p:last-child { color:var(--muted); margin-bottom:0; max-width:510px; }
-    .reason-stack { display:grid; gap:22px; }
-    .reason-stack > article { padding:30px; border-radius:5px 18px 5px 18px; }
-    .reason-stack h3 { font-size:1.15rem; margin-bottom:8px; }
-    .reason-stack p { margin-bottom:0; color:var(--muted); }
-    .referral { background:var(--blue); color:#fff; position:relative; overflow:hidden; }
-    .referral-grid { display:grid; grid-template-columns:1fr .8fr; gap:70px; align-items:center; position:relative; z-index:1; }
-    .referral h2 { max-width:670px; }
-    .referral p { color:#d7e9f3; max-width:650px; font-size:1.08rem; }
-    .steps { list-style:none; padding:0; margin:0; counter-reset:steps; }
-    .steps li { counter-increment:steps; display:grid; grid-template-columns:42px 1fr; gap:16px; align-items:start; padding:18px 0; border-bottom:1px solid rgba(255,255,255,.2); }
-    .steps li::before { content:counter(steps,decimal-leading-zero); font-weight:800; color:var(--gold); }
-    .steps strong { display:block; margin-bottom:2px; }
-    .steps span { color:#cae0eb; font-size:.91rem; }
-    .matcher { background:var(--surface-2); background-image:radial-gradient(rgba(12,92,143,.10) 1px, transparent 1.4px); background-size:22px 22px; }
-    .matcher-grid { display:grid; grid-template-columns:.78fr 1.22fr; gap:60px; align-items:start; }
-    .matcher-copy { position:sticky; top:24px; }
-    .matcher-copy p { color:var(--muted); }
-    .panel { background:var(--surface); padding:clamp(24px,4vw,42px); border:1px solid var(--line); border-radius:16px 5px 16px 5px; box-shadow:var(--shadow); }
-    .fields { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-    label { display:grid; gap:7px; font-weight:700; font-size:.91rem; }
-    label.full { grid-column:1 / -1; }
-    input,select,textarea { width:100%; border:1px solid var(--line); border-radius:7px; background:var(--paper); color:var(--ink); padding:13px 14px; outline:none; }
-    input:focus,select:focus,textarea:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(57,185,223,.24); }
-    textarea { min-height:128px; resize:vertical; }
-    .panel .actions { margin-top:20px; }
-    .copy-status { min-height:24px; margin:12px 0 0; color:var(--blue-2); font-weight:700; font-size:.9rem; }
-    .visit-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
-    .meet-copy { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:30px; }
-    .meet-copy h2 { font-size:clamp(2rem,4vw,3rem); }
-    .address-card { padding:32px; background:var(--surface); border-top:5px solid var(--cyan); box-shadow:var(--shadow); }
-    .address-card h3 { font-family:"Newsreader",serif; font-size:2rem; margin-bottom:12px; }
-    .address-card p { color:var(--muted); }
-    .small { font-size:.8rem; color:var(--muted); margin-top:22px; }
-    .faq { display:grid; gap:0; }
-    details { border-top:1px solid var(--line); padding:20px 0; }
-    details:last-child { border-bottom:1px solid var(--line); }
-    summary { cursor:pointer; font-weight:800; list-style:none; display:flex; justify-content:space-between; gap:16px; }
-    summary::-webkit-details-marker { display:none; }
-    summary::after { content:"+"; color:var(--blue-2); font-size:1.4rem; line-height:1; }
-    details[open] summary::after { content:"−"; }
-    details p { color:var(--muted); max-width:760px; margin:12px 0 0; }
-    footer { padding:32px 0 46px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
-    footer .wrap { display:flex; justify-content:space-between; gap:24px; align-items:start; }
-    footer p { margin:0; max-width:720px; }
-    footer a { color:var(--blue-2); font-weight:700; }
-    @media (max-width:760px) {
-      .wrap { width:min(100% - 28px,1160px); }
-      .hero { min-height:600px; }
-      .hero-inner { padding:120px 0 64px; }
-      h1 { font-size:clamp(2.8rem,15vw,4.4rem); }
-      .actions { display:grid; } .btn { width:100%; }
-      .proof { margin-top:-28px; } .proof-grid { grid-template-columns:1fr; border-radius:14px; }
-      main > section:first-of-type { padding-top:40px; }
-      .proof-item { padding:22px 24px; } .proof-item + .proof-item { border-left:0; border-top:1px solid var(--line); }
-      section { padding:64px 0; }
-      .cards { grid-template-columns:1fr; }
-      .reasons,.referral-grid,.matcher-grid,.visit-grid { grid-template-columns:1fr; }
-      /* On a phone the photos are small and sit above the text, not beside a squeezed column. */
-                .award { flex-direction:column; gap:4px; padding:16px 0; }
-      .award a { white-space:normal; }
-      .reason-main { min-height:320px; } .referral-grid { gap:30px; }
-      .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
-      footer .wrap { flex-direction:column; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <nav class="topnav">
+    <div class="wrap">
+      <a class="brand" href="./">Gus McClellan</a>
+      <a href="about/">About Gus</a>
+      <a href="achievements/">Achievements</a>
+      <a href="referrals/">Referrals</a>
+      <a href="family/">Family businesses</a>
+    </div>
+  </nav>
   <header class="hero">
     <div class="wrap hero-inner">
       <div class="tenure">Around a decade at Green Hyundai in Springfield</div>
@@ -268,7 +165,7 @@
         <div>
           <h2>Know someone shopping? Send them Gus's way.</h2>
           <p>Introductions matter. When your friend or family member purchases, Gus offers a <strong>$200 cash referral bonus</strong> as a thank-you. Message him for the terms.</p>
-          <p>And if you buy a car from Gus, you also get 15% off at both family businesses — Cade's Liquidation and Lace &amp; Hide Mercantile. <a href="https://cadesliquidation.com/family/" target="_blank" rel="noopener">See the family deals ↗</a></p>
+          <p>And if you buy a car from Gus, you also get 15% off at both family businesses — Cade's Liquidation and Lace &amp; Hide Mercantile. <a href="family/">See the family deals ↗</a></p>
           <div class="actions">
             <a class="btn" href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Make a referral on Facebook <span aria-hidden="true">↗</span></a>
           </div>
