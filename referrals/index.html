@@ -46,6 +46,23 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Send Gus's info to a friend.</h2>
+          <p>One tap opens a text with everything they need &mdash; or copy it and paste it anywhere.</p>
+        </div>
+        <div class="panel" style="max-width:720px;">
+          <textarea id="share-text" readonly aria-describedby="share-status">Gus McClellan — car salesman at Green Hyundai, 601 W. Stanford Ave, Springfield, IL. He's been selling cars there since 2013 and most of his business is repeat customers and referrals. Looking for a new Hyundai or a used car? Call or text him at (217) 671-2520, or email gus.mcclellan@greenfamilystores.net. Tell him I sent you — he pays a $200 cash referral bonus when someone I send buys a car. His site: https://cadesliquidation.com/gus-mcclellan/</textarea>
+          <div class="actions">
+            <a class="btn dark" id="sms-share" href="sms:?&amp;body=Gus%20McClellan%20%E2%80%94%20car%20salesman%20at%20Green%20Hyundai%2C%20601%20W.%20Stanford%20Ave%2C%20Springfield%2C%20IL.%20He%27s%20been%20selling%20cars%20there%20since%202013%20and%20most%20of%20his%20business%20is%20repeat%20customers%20and%20referrals.%20Looking%20for%20a%20new%20Hyundai%20or%20a%20used%20car%3F%20Call%20or%20text%20him%20at%20%28217%29%20671-2520%2C%20or%20email%20gus.mcclellan%40greenfamilystores.net.%20Tell%20him%20I%20sent%20you%20%E2%80%94%20he%20pays%20a%20%24200%20cash%20referral%20bonus%20when%20someone%20I%20send%20buys%20a%20car.%20His%20site%3A%20https%3A%2F%2Fcadesliquidation.com%2Fgus-mcclellan%2F">Text this to a friend</a>
+            <button class="btn" type="button" id="copy-share">Copy Gus's info</button>
+          </div>
+          <p id="share-status" class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
     <section>
       <div class="wrap">
         <div class="section-head">
@@ -67,6 +84,27 @@
       <a href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Gus on Facebook <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var text = document.getElementById('share-text');
+      var copy = document.getElementById('copy-share');
+      var status = document.getElementById('share-status');
+      copy.addEventListener('click', function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text.value).then(function () {
+            status.textContent = 'Copied \u2014 paste it into any text, email, or post.';
+          }).catch(function () {
+            text.focus(); text.select();
+            status.textContent = 'Select the text above and copy it.';
+          });
+        } else {
+          text.focus(); text.select();
+          status.textContent = 'Select the text above and copy it.';
+        }
+      });
+    })();
+  </script>
   <script src="../assets/nav.js" defer></script>
 </body>
 </html>

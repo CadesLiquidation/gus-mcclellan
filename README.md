@@ -49,6 +49,11 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   Cody Carter's Express Store How It Works page; every step is a
   restatement of copy already on Gus's site. Reuses the `.steps`
   component.
+- Message builder (2026-11-10): "Text Gus this request" (SMS prefill),
+  "Email Gus this request" (mailto to his work email
+  gus.mcclellan@greenfamilystores.net, subject "Car shopping request",
+  body = the built message, kept in sync by the same `buildMessage()`),
+  and Copy request. Intro copy mentions the email option for computers.
 - Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
   Family, one row on mobile. Current page link is highlighted cyan
   (`.topnav a.current`); remember to set it on each page. Smart header
