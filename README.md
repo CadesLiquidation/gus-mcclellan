@@ -20,15 +20,16 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   `referrals/`, `family/` — the family page is Gus's own version of the
   cross-promotion (no redirect to cadesliquidation.com/family). All
   pages share `assets/style.css` and a top nav.
-- Reviews: three Google reviews naming Gus added 2026-11-10 (Chad Scott,
-  Shawna Neihoff, Mark Jennings — from Cade's screenshots of Green
-  Hyundai's Google profile; months worked out from the "9 months ago" /
-  "7 months ago" labels, so approximate). Other reviews in those
-  screenshots name other salespeople and were left out.
-- Nav (2026-11-10): transparent over the hero on the homepage; on phones
-  two deliberate rows (brand on top, links spread evenly below). Lesson:
-  rules appended AFTER the media query beat the mobile overrides — keep
-  base rules before the media query in style.css.
+- Reviews (2026-11-10): 14 total, newest first — Mark Jennings (Google,
+  Apr 2026), Chad Scott & Shawna Neihoff (Google, Feb 2026), Joseph
+  Daniels (Google, Dec 2025), Patricia Dorsey, Liz Sims, Lisa Atteberry,
+  Tonya Anders, Bryan Groves (Google, Nov 2025), then the five
+  DealerRater reviews (Jul 2022 back to Jan 2016). Months are approximate,
+  worked out from the screenshots' relative dates. New reviews go at the
+  top. Reviews naming other salespeople (Doug Bishop, John McCarthy,
+  Taylor Upshaw, Brian/John, Adam) were left out.
+- Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
+  Family, one row on mobile.
 - Mobile check (2026-11-10): render the live page at 390px with
   Playwright before announcing a mobile fix — `npx playwright install
   chromium` (no --with-deps), `playwright-core` in /tmp, download the
