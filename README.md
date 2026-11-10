@@ -54,6 +54,12 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   gus.mcclellan@greenfamilystores.net, subject "Car shopping request",
   body = the built message, kept in sync by the same `buildMessage()`),
   and Copy request. Intro copy mentions the email option for computers.
+- Referrals (2026-11-10): "Send Gus's info to a friend" share card — a
+  read-only text block with his name, dealership, address, since-2013 line,
+  phone, work email, the $200 referral bonus, and his site link, plus a
+  "Text this to a friend" button (SMS prefill, no fixed recipient) and a
+  "Copy Gus's info" button (clipboard + fallback, same handler pattern as
+  the homepage message builder).
 - Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
   Family, one row on mobile. Current page link is highlighted cyan
   (`.topnav a.current`); remember to set it on each page. Smart header
