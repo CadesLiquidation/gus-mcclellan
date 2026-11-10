@@ -118,6 +118,7 @@
       .proof-item { padding:22px 24px; } .proof-item + .proof-item { border-left:0; border-top:1px solid var(--line); }
       section { padding:64px 0; }
       .cards { grid-template-columns:1fr; }
+      .photo-grid { grid-template-columns:1fr; }
       .reasons,.referral-grid,.matcher-grid,.visit-grid { grid-template-columns:1fr; }
       .award { flex-direction:column; gap:4px; padding:16px 0; }
       .reason-main { min-height:320px; } .referral-grid { gap:30px; }
@@ -131,3 +132,8 @@
     #reviews-grid .card > p:first-child { color:var(--ink); }
     .card.extra { display:none; }
     .cards.expanded .card.extra { display:block; }
+    .photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    figure { margin:0; }
+    figure img { border-radius:14px; width:100%; }
+    figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
+    .about-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; }

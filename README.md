@@ -30,6 +30,12 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   Taylor Upshaw, Brian/John, Adam) were left out. Homepage shows the 3
   most recent with a "View all 14 reviews" toggle (JS, `#reviews-grid`
   + `#reviews-toggle`); review quotes render in ink, not muted gray.
+- How It Works (2026-11-10): 5-step section on the homepage between the
+  message builder and reviews (Tell Gus what you need → He narrows it
+  down → See it and drive it → Trade-in → Drive it home). Idea from
+  Cody Carter's Express Store How It Works page; every step is a
+  restatement of copy already on Gus's site. Reuses the `.steps`
+  component.
 - Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
   Family, one row on mobile. Current page link is highlighted cyan
   (`.topnav a.current`); remember to set it on each page. Smart header
