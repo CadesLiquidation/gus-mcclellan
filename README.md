@@ -60,7 +60,11 @@ Personal sales page for Gus McClellan, sales consultant at Green Hyundai,
   "Text this to a friend" button (SMS prefill, no fixed recipient) and a
   "Copy Gus's info" button (clipboard + fallback, same handler pattern as
   the homepage message builder).
-- Nav (2026-11-10): no brand text — Home, About, Achievements, Referrals,
+- Hero photo: `assets/dealership-2.jpg` — the sharper wide dealership shot
+  Cade supplied 2026-11-10 (replaced the blurry original
+  `dealership.jpg`). Referenced in `assets/style.css` `.hero::before`
+  (`center 58% / cover`). New filename used so cached copies of the old
+  photo don't linger.
   Family, one row on mobile. Current page link is highlighted cyan
   (`.topnav a.current`); remember to set it on each page. Smart header
   (`assets/nav.js`, included on all pages): hides on scroll down, pops
