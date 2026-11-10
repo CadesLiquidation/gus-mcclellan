@@ -92,7 +92,6 @@
     .topnav.over-hero { position:absolute; top:0; left:0; right:0; background:transparent; z-index:5; }
     .topnav .wrap { display:flex; align-items:center; gap:8px 26px; flex-wrap:wrap; padding-top:12px; padding-bottom:12px; }
     .topnav a { color:#fff; text-decoration:none; font-weight:700; font-size:.92rem; }
-    .topnav a.brand { font-family:"Newsreader",serif; font-size:1.25rem; font-weight:650; margin-right:auto; }
     .topnav a:hover { color:var(--cyan); }
     .page-head { padding:72px 0 8px; }
     .page-head h1 { font-size:clamp(2.6rem,6vw,4rem); }
@@ -117,9 +116,8 @@
                 .award { flex-direction:column; gap:4px; padding:16px 0; }
       .reason-main { min-height:320px; } .referral-grid { gap:30px; }
       .matcher-copy { position:static; } .fields { grid-template-columns:1fr; } label.full { grid-column:auto; }
-      .topnav .wrap { flex-wrap:wrap; gap:8px 0; justify-content:space-between; }
+      .topnav .wrap { flex-wrap:nowrap; justify-content:space-between; }
       .topnav a { font-size:.85rem; white-space:nowrap; }
-      .topnav a.brand { flex:1 1 100%; font-size:1.15rem; margin-right:0; }
       footer .wrap { flex-direction:column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
