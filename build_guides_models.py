@@ -62,34 +62,25 @@ def cta_split(p, blurb):
     return f"""    <section>
       <div class="wrap">
         <div class="cta-split">
-          <img src="{p}assets/gus-portrait.jpg" alt="Gus McClellan" />
-          <div>
-            <h2>Talk to Gus first.</h2>
-            <p>{blurb}</p>
-            <div class="actions">
-              <a class="btn dark" href="tel:+12176712520">Call Gus — (217) 671-2520</a>
-              <a class="btn" href="sms:+12176712520">Text Gus</a>
-              <a class="btn" href="{p}#car-match">Tell Gus what you need</a>
-            </div>
+          <h2>Talk to Gus first.</h2>
+          <p>{blurb}</p>
+          <div class="actions">
+            <a class="btn dark" href="tel:+12176712520">Call Gus — (217) 671-2520</a>
+            <a class="btn" href="sms:+12176712520">Text Gus</a>
+            <a class="btn" href="{p}#car-match">Tell Gus what you need</a>
           </div>
         </div>
       </div>
     </section>"""
 
 
-def photo_split(p, heading, *paras):
+def info_split(heading, *paras):
     ps = "\n".join(f"            <p>{x}</p>" for x in paras)
     return f"""    <section>
       <div class="wrap">
-        <div class="visit-grid">
-          <figure class="figure-tall">
-            <img src="{p}assets/gus-showroom.jpg" alt="Gus at Green Hyundai in Springfield" />
-            <figcaption>Gus at Green Hyundai in Springfield.</figcaption>
-          </figure>
-          <div>
-            <h2>{heading}</h2>
+        <div style="max-width:720px;">
+          <h2>{heading}</h2>
 {ps}
-          </div>
         </div>
       </div>
     </section>"""
@@ -128,7 +119,7 @@ def page(prefix, slug_path, title, desc, og_url, kicker, h1, intro, body):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
   <title>{title}</title>
-  <link rel="stylesheet" href="{prefix}assets/style.css?v=10">
+  <link rel="stylesheet" href="{prefix}assets/style.css?v=11">
 {GA_BLOCK}
 </head>
 <body>
@@ -429,7 +420,7 @@ page("../", "models",
          ("hyundai-2027-kona.webp", "2027", "Hyundai Kona", "Small outside, roomy inside. The city-friendly SUV — gas or fully electric.", "kona/"),
          ("hyundai-2027-ioniq-5.webp", "2027", "Hyundai IONIQ 5", "The all-electric SUV. Five seats, very fast charging, and room to stretch out.", "ioniq-5/"),
      ]) + "\n" +
-     photo_split("../", "Looking for used instead?",
+     info_split("Looking for used instead?",
              "Gus sells used Hyundais and used cars from other brands too — same store, same person to call. If a used car is the right call for your budget, he will find you a good one.",
              "Read the new vs. used guide first if you are torn — it will tell you which side of the line you are on.",
              "<a href=\"../guides/new-vs-used/\">New vs. used: which is right for you? &rarr;</a>") + "\n" +
@@ -450,7 +441,7 @@ def model(slug, name, year, title_h1, intro, facts, sections, note, related_link
       </div>
     </section>"""
     body += "\n" + facts_row(facts)
-    body += "\n" + photo_split("../../", "See it in person.",
+    body += "\n" + info_split("See it in person.",
         "The cars are at Green Hyundai, 601 W. Stanford Ave. in Springfield. Text Gus before you come and he will have the one you want ready to drive — or tell you honestly if it is not there yet.",
         "<a href=\"https://www.greenhyundai.com/all-inventory/index.htm\" target=\"_blank\" rel=\"noopener\">Browse current inventory &nearr;</a> · <a href=\"https://www.hyundaiusa.com/us/en/vehicles\" target=\"_blank\" rel=\"noopener\">See photos of the whole lineup on Hyundai’s site &nearr;</a>")
     body += "\n" + "\n".join(section(h2, *paras) for h2, paras in sections)

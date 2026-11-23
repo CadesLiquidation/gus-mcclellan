@@ -137,12 +137,9 @@
     .checklist li::before { content:"✓"; position:absolute; left:0; top:12px; font-weight:800; color:var(--blue-2); }
     .checklist li:last-child { border-bottom:0; }
     .cards.two { grid-template-columns:repeat(2,1fr); }
-    .cta-split { display:grid; grid-template-columns:150px 1fr; gap:28px; align-items:center; background:var(--surface); border:1px solid var(--line); border-radius:18px 5px 18px 5px; padding:30px; }
-    .cta-split img { width:150px; height:150px; object-fit:cover; object-position:top; border-radius:14px; }
+    .cta-split { background:var(--surface); border:1px solid var(--line); border-radius:18px 5px 18px 5px; padding:30px; }
     .cta-split h2 { margin-bottom:10px; }
     .cta-split p { color:var(--muted); margin-bottom:0; }
-    .figure-tall img { height:430px; object-fit:cover; object-position:top; border-radius:14px; box-shadow:var(--shadow); width:100%; }
-    .figure-tall figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
     /* Model photos (Hyundai official images, Nov 2026) */
     .car-hero { margin:0; }
     .car-hero img { width:100%; aspect-ratio:16/9; object-fit:cover; object-position:center 42%; border-radius:14px; box-shadow:var(--shadow); }
@@ -157,9 +154,6 @@
       .facts { grid-template-columns:1fr; }
       .compare { grid-template-columns:1fr; }
       .cards.two { grid-template-columns:1fr; }
-      .cta-split { grid-template-columns:1fr; }
-      .cta-split img { width:120px; height:120px; }
-      .figure-tall img { height:300px; }
     }
     /* ===== Christmas 2026 — seasonal touches, remove in January =====
        Snow falls BEHIND the hero content (own layer, never over text)
