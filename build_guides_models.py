@@ -119,12 +119,12 @@ def page(prefix, slug_path, title, desc, og_url, kicker, h1, intro, body):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
   <title>{title}</title>
-  <link rel="stylesheet" href="{prefix}assets/style.css?v=11">
+  <link rel="stylesheet" href="{prefix}assets/style.css?v=12">
 {GA_BLOCK}
 </head>
 <body>
 {nav}
-  <main>
+  <main class="docs">
     <div class="wrap page-head">
       <p class="kicker">{kicker}</p>
       <h1>{h1}</h1>

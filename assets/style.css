@@ -113,6 +113,7 @@
        Breaks up the header-paragraph rhythm: callouts, stat rows,
        side-by-side comparisons, checklists, numbered steps, and
        photo splits. Base rules sit before the @media blocks below. */
+    .docs section { padding:40px 0; }
     .gus-note { background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--gold); border-radius:14px; padding:26px 28px; max-width:720px; }
     .gus-note .note-label { display:block; font-size:.78rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--blue-2); margin-bottom:8px; }
     .gus-note p { margin-bottom:0; color:var(--muted); font-size:1.08rem; }
@@ -151,6 +152,7 @@
     .car-card p { color:var(--muted); margin-bottom:10px; font-size:.95rem; }
     .car-card a { color:var(--blue-2); font-weight:700; }
     @media (max-width:760px) {
+      .docs section { padding:28px 0; }
       .facts { grid-template-columns:1fr; }
       .compare { grid-template-columns:1fr; }
       .cards.two { grid-template-columns:1fr; }
