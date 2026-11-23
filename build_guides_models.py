@@ -51,7 +51,7 @@ def footer(p):
     return f"""  <footer>
     <div class="wrap">
       <p><strong>Green Hyundai</strong> — 601 W. Stanford Ave., Springfield, IL 62704 · Sales <a href="tel:+12175251370">(217) 525-1370</a> · Gus direct <a href="tel:+12176712520">(217) 671-2520</a> · Mon–Fri 9:00 AM–7:00 PM, Sat 9:00 AM–6:00 PM, Sun closed. Dealership inventory, prices, incentives, and availability are maintained by Green Hyundai and may change — check <a href="https://www.greenhyundai.com/" target="_blank" rel="noopener">greenhyundai.com</a> for current details.</p>
-      <p>This is Gus McClellan's personal sales page. It is not the official Green Hyundai or Hyundai Motor America website, and it is not affiliated with or endorsed by Hyundai Motor America. Hyundai and Hyundai model names are registered trademarks of Hyundai Motor Company / Hyundai Motor America. All rights reserved. No Hyundai logos, prices, or inventory are published here — for current inventory, pricing, and offers, see greenhyundai.com.</p>
+      <p>This is Gus McClellan's personal sales page. It is not the official Green Hyundai or Hyundai Motor America website, and it is not affiliated with or endorsed by Hyundai Motor America. Hyundai and Hyundai model names are registered trademarks of Hyundai Motor Company / Hyundai Motor America. All rights reserved. Vehicle photos courtesy of Hyundai Motor America. No prices or inventory are published here — for current inventory, pricing, and offers, see greenhyundai.com.</p>
       <p><a href="{p}guides/">Car buying guides</a> · <a href="{p}models/">New Hyundai models</a></p>
       <a href="https://www.facebook.com/share/1K6tKdTTzo/?mibextid=wwXIfr" target="_blank" rel="noopener">Gus on Facebook <span aria-hidden="true">↗</span></a>
     </div>
@@ -128,7 +128,7 @@ def page(prefix, slug_path, title, desc, og_url, kicker, h1, intro, body):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
   <title>{title}</title>
-  <link rel="stylesheet" href="{prefix}assets/style.css?v=9">
+  <link rel="stylesheet" href="{prefix}assets/style.css?v=10">
 {GA_BLOCK}
 </head>
 <body>
@@ -241,6 +241,20 @@ def facts_row(facts):
         </div>
         <div class="facts">
 {blocks}
+        </div>
+      </div>
+    </section>"""
+
+
+def car_cards(p, card_list):
+    arts = "\n".join(
+        f'          <article class="car-card"><img src="{p}assets/{img}" alt="{year} {name}" loading="lazy" /><div class="car-body"><span class="tag">{year}</span><h3>{name}</h3><p>{desc}</p><p><a href="{href}">Learn more &rarr;</a></p></div></article>'
+        for img, year, name, desc, href in card_list
+    )
+    return f"""    <section>
+      <div class="wrap">
+        <div class="cards">
+{arts}
         </div>
       </div>
     </section>"""
@@ -407,13 +421,13 @@ page("../", "models",
      "https://gusatgreen.com/models/",
      "New Hyundai models", "The new Hyundai lineup.",
      "Gus sells the full new Hyundai lineup at Green Hyundai in Springfield — gas, hybrid, plug-in hybrid, and fully electric. These are the models people ask him about most. No prices or inventory here on purpose — that changes daily, so text Gus for what is on the lot right now.",
-     cards([
-         ("SUV", "Hyundai Tucson", "The do-everything compact SUV. Five seats, gas, hybrid, or plug-in hybrid — the one Gus recommends most.", "tucson/", "Learn more →"),
-         ("SUV", "Hyundai Santa Fe", "Three rows for growing families, without going full-size. Gas or hybrid, six or seven seats.", "santa-fe/", "Learn more →"),
-         ("SUV", "Hyundai Palisade", "The biggest Hyundai. Seven or eight seats, the most room in the lineup, now with a hybrid.", "palisade/", "Learn more →"),
-         ("Sedan", "Hyundai Elantra", "The commuter’s Hyundai. Five seats, great mileage, and a hybrid that sips fuel.", "elantra/", "Learn more →"),
-         ("SUV", "Hyundai Kona", "Small outside, roomy inside. The city-friendly SUV — gas or fully electric.", "kona/", "Learn more →"),
-         ("Electric", "Hyundai IONIQ 5", "The all-electric SUV. Five seats, very fast charging, and room to stretch out.", "ioniq-5/", "Learn more →"),
+     car_cards("../", [
+         ("hyundai-2026-tucson.webp", "2026", "Hyundai Tucson", "The do-everything compact SUV. Five seats, gas, hybrid, or plug-in hybrid — the one Gus recommends most.", "tucson/"),
+         ("hyundai-2027-santa-fe.webp", "2027", "Hyundai Santa Fe", "Three rows for growing families, without going full-size. Gas or hybrid, six or seven seats.", "santa-fe/"),
+         ("hyundai-2027-palisade.webp", "2027", "Hyundai Palisade", "The biggest Hyundai. Seven or eight seats, the most room in the lineup, now with a hybrid.", "palisade/"),
+         ("hyundai-2026-elantra.webp", "2026", "Hyundai Elantra", "The commuter’s Hyundai. Five seats, great mileage, and a hybrid that sips fuel.", "elantra/"),
+         ("hyundai-2027-kona.webp", "2027", "Hyundai Kona", "Small outside, roomy inside. The city-friendly SUV — gas or fully electric.", "kona/"),
+         ("hyundai-2027-ioniq-5.webp", "2027", "Hyundai IONIQ 5", "The all-electric SUV. Five seats, very fast charging, and room to stretch out.", "ioniq-5/"),
      ]) + "\n" +
      photo_split("../", "Looking for used instead?",
              "Gus sells used Hyundais and used cars from other brands too — same store, same person to call. If a used car is the right call for your budget, he will find you a good one.",
@@ -426,27 +440,37 @@ page("../", "models",
      ]))
 
 
-def model(slug, name, title_h1, intro, facts, sections, note, related_links):
-    body = facts_row(facts)
+def model(slug, name, year, title_h1, intro, facts, sections, note, related_links, photo, coming_soon=None):
+    body = f"""    <section>
+      <div class="wrap">
+        <figure class="car-hero">
+          <img src="../../assets/{photo}" alt="{year} Hyundai {name}" />
+          <figcaption>The {year} Hyundai {name}. Photo: Hyundai.</figcaption>
+        </figure>
+      </div>
+    </section>"""
+    body += "\n" + facts_row(facts)
     body += "\n" + photo_split("../../", "See it in person.",
         "The cars are at Green Hyundai, 601 W. Stanford Ave. in Springfield. Text Gus before you come and he will have the one you want ready to drive — or tell you honestly if it is not there yet.",
         "<a href=\"https://www.greenhyundai.com/all-inventory/index.htm\" target=\"_blank\" rel=\"noopener\">Browse current inventory &nearr;</a> · <a href=\"https://www.hyundaiusa.com/us/en/vehicles\" target=\"_blank\" rel=\"noopener\">See photos of the whole lineup on Hyundai’s site &nearr;</a>")
     body += "\n" + "\n".join(section(h2, *paras) for h2, paras in sections)
     body += "\n" + gus_note("Why buy new", note)
+    if coming_soon:
+        body += "\n" + gus_note("Coming soon", coming_soon)
     body += "\n" + section("New or used?",
         "A new one gets you the full factory warranty, the latest safety tech, and your pick of color and features — and if the numbers work, that is the one Gus will usually steer you toward. A used one costs less and still gets the same person to call after the sale. Either way, you buy from Gus.",
         "Inventory, prices, and offers change daily, so text Gus for what is on the lot right now.")
     body += "\n" + cta_split("../../", f"Want a {name}? Text Gus and he will check what is on the lot — or what is coming in.")
     body += "\n" + related("../../", related_links)
     page("../../", f"models/{slug}",
-         f"2026 Hyundai {name} | Gus McClellan, Green Hyundai",
-         f"The 2026 Hyundai {name} at Green Hyundai in Springfield, IL — {intro}",
+         f"{year} Hyundai {name} | Gus McClellan, Green Hyundai",
+         f"The {year} Hyundai {name} at Green Hyundai in Springfield, IL — {intro}",
          f"https://gusatgreen.com/models/{slug}/",
          f"Hyundai {name}", title_h1, intro, body)
 
 
 # ---------------------------------------------------------------- Tucson
-model("tucson", "Tucson", "The 2026 Hyundai Tucson.",
+model("tucson", "Tucson", 2026, "The 2026 Hyundai Tucson.",
       "The do-everything compact SUV — five seats, room for the family and the gear, and your choice of gas, hybrid, or plug-in hybrid. It is the model Gus recommends most, because it fits the most people.",
       [("Seats", "5"), ("Powertrains", "Gas, hybrid, or plug-in hybrid"), ("Best for", "Families of four, commuters")],
       [("Why people pick the Tucson",
@@ -457,10 +481,12 @@ model("tucson", "Tucson", "The 2026 Hyundai Tucson.",
       [("../santa-fe/", "Hyundai Santa Fe — need a third row?"),
        ("../ioniq-5/", "Hyundai IONIQ 5 — fully electric"),
        ("../../guides/new-vs-used/", "New vs. used: which is right for you?"),
-       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")])
+       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")],
+      "hyundai-2026-tucson-hero.webp",
+      coming_soon="The all-new 2027 Tucson has been revealed — bigger, redesigned from the ground up, with a new 1.6-liter turbo and hybrid options. It is not on the lot yet; text Gus to be first in line when it lands.")
 
 # ---------------------------------------------------------------- Santa Fe
-model("santa-fe", "Santa Fe", "The 2026 Hyundai Santa Fe.",
+model("santa-fe", "Santa Fe", 2027, "The 2027 Hyundai Santa Fe.",
       "Three rows for growing families, without going full-size. Six or seven seats, a boxy shape that makes the inside huge, and a hybrid that sips fuel.",
       [("Seats", "6 or 7"), ("Powertrains", "Gas or hybrid"), ("Best for", "Growing families, carpools")],
       [("Three rows, without the full-size feel",
@@ -471,24 +497,26 @@ model("santa-fe", "Santa Fe", "The 2026 Hyundai Santa Fe.",
       [("../palisade/", "Hyundai Palisade — need even more room?"),
        ("../tucson/", "Hyundai Tucson — the smaller SUV"),
        ("../../guides/new-vs-used/", "New vs. used: which is right for you?"),
-       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")])
+       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")],
+      "hyundai-2027-santa-fe-hero.webp")
 
 # ---------------------------------------------------------------- Palisade
-model("palisade", "Palisade", "The 2026 Hyundai Palisade.",
+model("palisade", "Palisade", 2027, "The 2027 Hyundai Palisade.",
       "The biggest Hyundai — seven or eight seats, the most room in the lineup, and now with a hybrid. For big families, road trips, and everything that comes with them.",
       [("Seats", "7 or 8"), ("Powertrains", "Gas or hybrid"), ("Best for", "Big families, road trips")],
       [("The biggest Hyundai",
         ["Three real rows, room for eight, and the biggest cargo space Hyundai makes — up to 86.7 cubic feet with the rear seats folded. Second-row captain’s chairs are available, so the third row is easy to reach. This is the one for families who actually fill all three rows."]),
        ("The new hybrid",
-        ["For 2026 the Palisade is all new, and for the first time it comes as a hybrid — up to 34 mpg combined (EPA-estimated) in a full-size three-row SUV. Big car, much better mileage, no plugging in."])],
+        ["The Palisade went all new for 2026, and the 2027 carries over the first-ever hybrid — up to 34 mpg combined (EPA-estimated) in a full-size three-row SUV. Big car, much better mileage, no plugging in."])],
       "A new Palisade gets the full factory warranty, the newest safety tech, and your pick of seating and features. It is the flagship for a reason — and if the payment fits, new is the way to go.",
       [("../santa-fe/", "Hyundai Santa Fe — three rows, smaller footprint"),
        ("../tucson/", "Hyundai Tucson"),
        ("../../guides/new-vs-used/", "New vs. used: which is right for you?"),
-       ("../../guides/trade-in/", "Trading in your car")])
+       ("../../guides/trade-in/", "Trading in your car")],
+      "hyundai-2027-palisade-hero.webp")
 
 # ---------------------------------------------------------------- Elantra
-model("elantra", "Elantra", "The 2026 Hyundai Elantra.",
+model("elantra", "Elantra", 2026, "The 2026 Hyundai Elantra.",
       "The commuter’s Hyundai — a compact sedan with five seats, great mileage, and a hybrid that barely sips fuel. Low cost to buy, low cost to run.",
       [("Seats", "5"), ("Powertrains", "Gas or hybrid"), ("Best for", "Commuters, first cars")],
       [("The commuter’s Hyundai",
@@ -501,24 +529,27 @@ model("elantra", "Elantra", "The 2026 Hyundai Elantra.",
       [("../../guides/first-car/", "Buying your first car"),
        ("../kona/", "Hyundai Kona — want an SUV instead?"),
        ("../../guides/new-vs-used/", "New vs. used: which is right for you?"),
-       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")])
+       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")],
+      "hyundai-2026-elantra-hero.webp",
+      coming_soon="The redesigned 2027 Elantra is coming — bigger and bolder, with a hybrid rated up to 53 mpg combined (EPA-estimated). The first 2027s reach dealers early next year; the hybrid follows as a 2028. Text Gus to be first in line.")
 
 # ---------------------------------------------------------------- Kona
-model("kona", "Kona", "The 2026 Hyundai Kona.",
+model("kona", "Kona", 2027, "The 2027 Hyundai Kona.",
       "Small outside, roomy inside. The city-friendly SUV — easy to park, easy on gas, and available as a fully electric Kona Electric.",
       [("Seats", "5"), ("Powertrains", "Gas or fully electric"), ("Best for", "City driving, a first SUV")],
       [("Small outside, roomy inside",
         ["The Kona is the smallest Hyundai SUV, and that is the point: it slips into tight parking spots and tight garages, but the inside is roomy for five people and their stuff. It is a great first SUV, and a great second car."]),
        ("Gas or electric?",
-        ["The gas Kona is simple and affordable. The Kona Electric is fully electric with up to 261 miles of range (EPA-estimated) — charge at home overnight and skip gas stations entirely. Availability varies, so ask Gus what is in stock."])],
+        ["The gas Kona is simple and affordable. The Kona Electric — the 2025 model, while stock lasts — is fully electric with up to 261 miles of range (EPA-estimated). Charge at home overnight and skip gas stations entirely. Availability varies, so ask Gus what is in stock."])],
       "A new Kona gets the full factory warranty and the newest safety tech, and the electric version gets the latest battery. If the payment fits, new is the way to go.",
       [("../elantra/", "Hyundai Elantra — the sedan option"),
        ("../ioniq-5/", "Hyundai IONIQ 5 — the bigger electric SUV"),
        ("../../guides/first-car/", "Buying your first car"),
-       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")])
+       ("../../guides/ev-hybrid/", "EVs and hybrids, explained")],
+      "hyundai-2027-kona-hero.webp")
 
 # ---------------------------------------------------------------- Ioniq 5
-model("ioniq-5", "IONIQ 5", "The 2026 Hyundai IONIQ 5.",
+model("ioniq-5", "IONIQ 5", 2027, "The 2027 Hyundai IONIQ 5.",
       "The all-electric SUV — five seats, very fast charging, and room to stretch out. Electric without the compromises.",
       [("Seats", "5"), ("Powertrains", "Fully electric, rear- or all-wheel drive"), ("Best for", "Going electric, fast charging")],
       [("Electric without the compromises",
@@ -529,6 +560,7 @@ model("ioniq-5", "IONIQ 5", "The 2026 Hyundai IONIQ 5.",
       [("../kona/", "Hyundai Kona — the smaller electric option"),
        ("../tucson/", "Hyundai Tucson — hybrid instead?"),
        ("../../guides/ev-hybrid/", "EVs and hybrids, explained"),
-       ("../../guides/new-vs-used/", "New vs. used: which is right for you?")])
+       ("../../guides/new-vs-used/", "New vs. used: which is right for you?")],
+      "hyundai-2027-ioniq-5-hero.webp")
 
 print("done")

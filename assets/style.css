@@ -143,6 +143,16 @@
     .cta-split p { color:var(--muted); margin-bottom:0; }
     .figure-tall img { height:430px; object-fit:cover; object-position:top; border-radius:14px; box-shadow:var(--shadow); width:100%; }
     .figure-tall figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
+    /* Model photos (Hyundai official images, Nov 2026) */
+    .car-hero { margin:0; }
+    .car-hero img { width:100%; aspect-ratio:16/9; object-fit:cover; object-position:center 42%; border-radius:14px; box-shadow:var(--shadow); }
+    .car-hero figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
+    .car-card { background:var(--surface); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+    .car-card img { width:100%; aspect-ratio:16/10; object-fit:cover; display:block; }
+    .car-card .car-body { padding:18px 20px 22px; }
+    .car-card h3 { font-size:1.1rem; margin-bottom:4px; }
+    .car-card p { color:var(--muted); margin-bottom:10px; font-size:.95rem; }
+    .car-card a { color:var(--blue-2); font-weight:700; }
     @media (max-width:760px) {
       .facts { grid-template-columns:1fr; }
       .compare { grid-template-columns:1fr; }
