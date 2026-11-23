@@ -109,6 +109,48 @@
     figure img { border-radius:14px; width:100%; }
     figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
     .about-photo img { border-radius:14px; box-shadow:var(--shadow); width:100%; }
+    /* ===== Guides + Models pages (Nov 2026) — varied layouts =====
+       Breaks up the header-paragraph rhythm: callouts, stat rows,
+       side-by-side comparisons, checklists, numbered steps, and
+       photo splits. Base rules sit before the @media blocks below. */
+    .gus-note { background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--gold); border-radius:14px; padding:26px 28px; max-width:720px; }
+    .gus-note .note-label { display:block; font-size:.78rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--blue-2); margin-bottom:8px; }
+    .gus-note p { margin-bottom:0; color:var(--muted); font-size:1.08rem; }
+    .gus-note p strong { color:var(--ink); }
+    .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .fact { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:22px 24px; }
+    .fact span { display:block; font-size:.78rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--blue-2); margin-bottom:6px; }
+    .fact strong { display:block; font-family:"Newsreader",serif; font-size:1.35rem; line-height:1.15; font-weight:650; }
+    .compare { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .compare article { border-radius:14px; padding:26px; }
+    .compare .go-new { background:var(--blue); color:#fff; }
+    .compare .go-new h3 { color:#fff; }
+    .compare .go-new p, .compare .go-new ul { color:#d7e9f3; }
+    .compare .go-used { background:var(--surface); border:1px solid var(--line); }
+    .compare .go-used p, .compare .go-used ul { color:var(--muted); }
+    .compare h3 { font-size:1.15rem; margin-bottom:8px; }
+    .compare p { margin-bottom:0; }
+    .compare ul { margin:12px 0 0; padding-left:20px; }
+    .compare li + li { margin-top:6px; }
+    .checklist { list-style:none; padding:0; margin:0; max-width:720px; }
+    .checklist li { padding:12px 0 12px 34px; position:relative; border-bottom:1px solid var(--line); }
+    .checklist li::before { content:"✓"; position:absolute; left:0; top:12px; font-weight:800; color:var(--blue-2); }
+    .checklist li:last-child { border-bottom:0; }
+    .cards.two { grid-template-columns:repeat(2,1fr); }
+    .cta-split { display:grid; grid-template-columns:150px 1fr; gap:28px; align-items:center; background:var(--surface); border:1px solid var(--line); border-radius:18px 5px 18px 5px; padding:30px; }
+    .cta-split img { width:150px; height:150px; object-fit:cover; object-position:top; border-radius:14px; }
+    .cta-split h2 { margin-bottom:10px; }
+    .cta-split p { color:var(--muted); margin-bottom:0; }
+    .figure-tall img { height:430px; object-fit:cover; object-position:top; border-radius:14px; box-shadow:var(--shadow); width:100%; }
+    .figure-tall figcaption { color:var(--muted); font-size:.9rem; margin-top:10px; }
+    @media (max-width:760px) {
+      .facts { grid-template-columns:1fr; }
+      .compare { grid-template-columns:1fr; }
+      .cards.two { grid-template-columns:1fr; }
+      .cta-split { grid-template-columns:1fr; }
+      .cta-split img { width:120px; height:120px; }
+      .figure-tall img { height:300px; }
+    }
     /* ===== Christmas 2026 — seasonal touches, remove in January =====
        Snow falls BEHIND the hero content (own layer, never over text)
        and a holiday section sits under the proof bar. Homepage only. */
