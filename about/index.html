@@ -16,12 +16,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
   <title>About Gus | Gus McClellan, Green Hyundai</title>
   <link rel="stylesheet" href="../assets/style.css?v=8">
-<!-- Google Tag Manager -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W93RLXP3"></script>
+<!-- Google tag (gtag.js) — library loads after page load so analytics
+     never blocks rendering or interactivity -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SXFHL5LZR1';
+    document.head.appendChild(s);
+    gtag('config', 'G-SXFHL5LZR1');
+  });
 </script>
 </head>
 <body>
