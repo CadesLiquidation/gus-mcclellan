@@ -15,6 +15,18 @@
 - [Achievements](https://gusatgreen.com/achievements/): Salesman of the Month, in car sales since 2013, built on repeat business.
 - [Referrals](https://gusatgreen.com/referrals/): $200 cash referral bonus when someone you send buys a car.
 - [Family](https://gusatgreen.com/family/): Three family businesses — Gus at Green Hyundai, Cade's Liquidation, and Lace & Hide Mercantile. 15% off across the family.
+- [Car Buying Guides](https://gusatgreen.com/guides/): Straight answers — trade-ins, new vs. used, first cars, EVs and hybrids.
+- [Trading In Your Car](https://gusatgreen.com/guides/trade-in/): How a trade-in works, what makes yours worth more, and how to get your number.
+- [New vs. Used](https://gusatgreen.com/guides/new-vs-used/): If the numbers work, buy new. If they don't, buy used from someone you trust.
+- [Buying Your First Car](https://gusatgreen.com/guides/first-car/): Start with the monthly number, not the car.
+- [EVs and Hybrids, Explained](https://gusatgreen.com/guides/ev-hybrid/): Gas, hybrid, plug-in hybrid, and fully electric in plain English.
+- [New Hyundai Models](https://gusatgreen.com/models/): The models people ask about most — Tucson, Santa Fe, Palisade, Elantra, Kona, IONIQ 5.
+- [Hyundai Tucson](https://gusatgreen.com/models/tucson/): Compact SUV, 5 seats, gas, hybrid, or plug-in hybrid.
+- [Hyundai Santa Fe](https://gusatgreen.com/models/santa-fe/): Three-row SUV, 6 or 7 seats, gas or hybrid.
+- [Hyundai Palisade](https://gusatgreen.com/models/palisade/): Biggest Hyundai, 7 or 8 seats, gas or hybrid.
+- [Hyundai Elantra](https://gusatgreen.com/models/elantra/): Compact sedan, 5 seats, gas or hybrid.
+- [Hyundai Kona](https://gusatgreen.com/models/kona/): Subcompact SUV, 5 seats, gas or fully electric.
+- [Hyundai IONIQ 5](https://gusatgreen.com/models/ioniq-5/): All-electric SUV, 5 seats, very fast charging.
 
 ## Key facts
 - In car sales since 2013, at Green Hyundai his whole career.
