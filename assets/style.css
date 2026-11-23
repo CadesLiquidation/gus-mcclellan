@@ -126,17 +126,6 @@
       from { background-position: 0 0, 0 0, 0 0; }
       to { background-position: 130px 130px, 190px 190px, 270px 270px; }
     }
-    /* Christmas lights across the top of the hero, under the nav — remove in January */
-    .xmas-hero .hero-inner { padding-top:120px; }
-    .xmas-lights { position:absolute; top:56px; left:0; right:0; height:40px; z-index:2; pointer-events:none; }
-    .xmas-lights .wire { position:absolute; top:0; left:0; width:100%; height:30px; }
-    .xmas-lights .bulb { position:absolute; width:12px; height:12px; margin-left:-6px; border-radius:50%; animation:xmas-twinkle 2.4s ease-in-out infinite; }
-    .xmas-lights .bulb::before { content:""; position:absolute; left:5px; top:-6px; width:2px; height:6px; background:rgba(0,0,0,0.5); }
-    .xmas-lights .b-red { background:radial-gradient(circle at 35% 35%, #fff, #ff5a5a 60%); box-shadow:0 0 12px 3px rgba(255,90,90,.8); }
-    .xmas-lights .b-gold { background:radial-gradient(circle at 35% 35%, #fff, #ffc531 60%); box-shadow:0 0 12px 3px rgba(255,197,49,.8); }
-    .xmas-lights .b-green { background:radial-gradient(circle at 35% 35%, #fff, #4ade80 60%); box-shadow:0 0 12px 3px rgba(74,222,128,.8); }
-    .xmas-lights .b-blue { background:radial-gradient(circle at 35% 35%, #fff, #6aa9ff 60%); box-shadow:0 0 12px 3px rgba(106,169,255,.8); }
-    @keyframes xmas-twinkle { 0%, 100% { opacity:1; } 50% { opacity:.35; } }
     .holiday { background:linear-gradient(135deg,#0e3d2c 0%,#0a2b20 100%); color:#f7f3e8; margin:32px 0; position:relative; overflow:hidden; border-top:4px solid #8e2f32; border-bottom:4px solid #8e2f32; }
     .holiday::before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
       background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22130%22%20height%3D%22130%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2224%22%20r%3D%221.1%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%2272%22%20cy%3D%2210%22%20r%3D%221.0%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%2258%22%20r%3D%221.2%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2288%22%20r%3D%221.0%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%2296%22%20cy%3D%22112%22%20r%3D%221.1%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2264%22%20r%3D%220.9%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%22122%22%20cy%3D%2295%22%20r%3D%221.0%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%2255%22%20cy%3D%2245%22%20r%3D%220.9%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.4%22%2F%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22190%22%20height%3D%22190%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2240%22%20r%3D%221.8%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%22120%22%20cy%3D%2220%22%20r%3D%221.6%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%22165%22%20cy%3D%2290%22%20r%3D%222.0%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%22130%22%20r%3D%221.7%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22160%22%20r%3D%221.9%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%22175%22%20r%3D%221.5%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%2295%22%20cy%3D%2275%22%20r%3D%221.6%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%22180%22%20cy%3D%22140%22%20r%3D%221.8%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.55%22%2F%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22270%22%20height%3D%22270%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2260%22%20r%3D%222.6%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%22190%22%20cy%3D%2240%22%20r%3D%222.4%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%22230%22%20cy%3D%22180%22%20r%3D%222.8%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%2290%22%20cy%3D%22220%22%20r%3D%222.5%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22150%22%20r%3D%222.3%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%22140%22%20cy%3D%22110%22%20r%3D%222.7%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%222.4%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3C%2Fsvg%3E");
@@ -147,11 +136,13 @@
     .holiday-art img { border-radius:14px; box-shadow:0 16px 48px rgba(0,0,0,.35); width:100%; height:auto; }
     .holiday h2 { color:#fff; }
     .holiday p { color:#dcefe4; max-width:560px; font-size:1.08rem; }
+    .holiday .btn:not(.secondary) { background:#8e2f32; color:#fff; }
+    .holiday .btn:not(.secondary):hover { background:#6e2326; }
     @media (max-width:760px) {
       .holiday-grid { grid-template-columns:1fr; }
       .holiday-art { max-width:440px; margin:0 auto; width:100%; }
     }
-    @media (prefers-reduced-motion: reduce) { .xmas-hero .xmas-snow, .holiday::before, .xmas-lights .bulb { animation:none; } }
+    @media (prefers-reduced-motion: reduce) { .xmas-hero .xmas-snow, .holiday::before { animation:none; } }
     @media (max-width:760px) {
       .wrap { width:min(100% - 28px,1160px); }
       .hero { min-height:600px; }
