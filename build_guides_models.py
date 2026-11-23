@@ -86,8 +86,8 @@ def info_split(heading, *paras):
     </section>"""
 
 
-def related(p, links):
-    items = "\n".join(f'          <li><a href="{p}{href}">{label}</a></li>' for href, label in links)
+def related(links):
+    items = "\n".join(f'          <li><a href="{href}">{label}</a></li>' for href, label in links)
     return f"""    <section>
       <div class="wrap">
         <div class="section-head">
@@ -279,8 +279,8 @@ page("../", "guides",
          ("Guide", "New vs. used", "The honest answer: if the numbers work, buy new. If they don’t, buy used from someone you trust. Here is how to tell which one you are.", "new-vs-used/", "Read the guide →"),
          ("Guide", "Buying your first car", "First cars are exciting and a little nerve-wracking. Start with the monthly number, not the car — and have one person to call through the whole thing.", "first-car/", "Read the guide →"),
          ("Guide", "EVs and hybrids, explained", "Gas, hybrid, plug-in hybrid, and fully electric — in plain English. Which one fits how you actually drive.", "ev-hybrid/", "Read the guide →"),
-     ]) + "\n" + cta_split("../", "Read a guide, then text Gus with what you are thinking. He will give you a straight answer — new or used — before you ever set foot in the store.") + "\n" + related("../", [
-         ("models/", "Popular Hyundai models"),
+     ]) + "\n" + cta_split("../", "Read a guide, then text Gus with what you are thinking. He will give you a straight answer — new or used — before you ever set foot in the store.") + "\n" + related([
+         ("../models/", "Popular Hyundai models"),
          ("../#car-match", "Tell Gus what you need"),
          ("../about/", "More about Gus"),
      ]))
@@ -308,7 +308,7 @@ page("../../", "guides/trade-in",
      section("You don’t have to buy new to trade in",
              "A trade-in works toward a used car too. If a used car is the right call for your budget, Gus will find you a good one — a used sale beats no sale, and he would rather put you in the right car than the wrong one. The trade-in still counts the same way.") + "\n" +
      gus_note("The best moment to go new", "If you are trading in, it is usually the best moment to buy new: full factory warranty from day one, the latest safety tech, no unknown history, and you pick the exact car — color, features, all of it. Hyundai backs its new vehicles with a 10-year / 100,000-mile powertrain limited warranty, so you are covered long after the trade is forgotten.") + "\n" +
-     cta_split("../../", "Text Gus the year, make, model, and miles on your current car — a photo or two helps — and he will give you a ballpark number before you ever come in.") + "\n" + related("../../", [
+     cta_split("../../", "Text Gus the year, make, model, and miles on your current car — a photo or two helps — and he will give you a ballpark number before you ever come in.") + "\n" + related([
          ("../new-vs-used/", "New vs. used: which is right for you?"),
          ("../first-car/", "Buying your first car"),
          ("../../models/", "Popular Hyundai models"),
@@ -343,7 +343,7 @@ page("../../", "guides/new-vs-used",
      ]) + "\n" +
      section("Then ask Gus",
              "Text Gus your budget and he will tell you which side of the line you are on — new or used — before you ever set foot in the store.") + "\n" +
-     cta_split("../../", "Not sure which way to go? Tell Gus your routine and your budget, and he will narrow it down — honestly.") + "\n" + related("../../", [
+     cta_split("../../", "Not sure which way to go? Tell Gus your routine and your budget, and he will narrow it down — honestly.") + "\n" + related([
          ("../trade-in/", "Trading in your car"),
          ("../first-car/", "Buying your first car"),
          ("../../models/", "Popular Hyundai models"),
@@ -374,7 +374,7 @@ page("../../", "guides/first-car",
          ("Drive it home", "Gus handles the paperwork and walks you through it — no guessing."),
          ("Same person after the sale", "If anything comes up, you call Gus. The relationship lasts past delivery day."),
      ]) + "\n" +
-     cta_split("../../", "First car? Text Gus what you are looking for and what you can spend. He will take it from there.") + "\n" + related("../../", [
+     cta_split("../../", "First car? Text Gus what you are looking for and what you can spend. He will take it from there.") + "\n" + related([
          ("../new-vs-used/", "New vs. used: which is right for you?"),
          ("../trade-in/", "Trading in your car"),
          ("../../models/elantra/", "Hyundai Elantra — a great first car"),
@@ -399,7 +399,7 @@ page("../../", "guides/ev-hybrid",
      section("Charging, honestly",
              "Most EV owners charge at home overnight, the same way you charge your phone — you wake up to a full car. On road trips, fast chargers do the job: the IONIQ 5 can charge from 10% to 80% in about 20 minutes on a fast charger. If home charging is not an option for you, that is fine — that is exactly what the hybrids are for.") + "\n" +
      gus_note("New is the way to go here", "EV and hybrid tech moves fast — batteries, charging, and driver-assist tech all get better every year. Buying new gets you the latest version, the full factory warranty, and the newest safety tech. Incentives and tax credits change all the time, so ask Gus what is available right now rather than trusting something you read months ago.") + "\n" +
-     cta_split("../../", "Curious about electric or hybrid? Tell Gus how you drive — commute, road trips, charging at home — and he will point you to the right one.") + "\n" + related("../../", [
+     cta_split("../../", "Curious about electric or hybrid? Tell Gus how you drive — commute, road trips, charging at home — and he will point you to the right one.") + "\n" + related([
          ("../../models/ioniq-5/", "Hyundai IONIQ 5 — fully electric"),
          ("../../models/tucson/", "Hyundai Tucson — gas, hybrid, or plug-in hybrid"),
          ("../../models/santa-fe/", "Hyundai Santa Fe — hybrid available"),
@@ -424,7 +424,7 @@ page("../", "models",
              "Gus sells used Hyundais and used cars from other brands too — same store, same person to call. If a used car is the right call for your budget, he will find you a good one.",
              "Read the new vs. used guide first if you are torn — it will tell you which side of the line you are on.",
              "<a href=\"../guides/new-vs-used/\">New vs. used: which is right for you? &rarr;</a>") + "\n" +
-     cta_split("../", "Know which one you want — or want Gus to pick for you? Text him and he will check what is on the lot.") + "\n" + related("../", [
+     cta_split("../", "Know which one you want — or want Gus to pick for you? Text him and he will check what is on the lot.") + "\n" + related([
          ("../guides/new-vs-used/", "New vs. used: which is right for you?"),
          ("../guides/ev-hybrid/", "EVs and hybrids, explained"),
          ("../#car-match", "Tell Gus what you need"),
@@ -452,7 +452,7 @@ def model(slug, name, year, title_h1, intro, facts, sections, note, related_link
         "A new one gets you the full factory warranty, the latest safety tech, and your pick of color and features — and if the numbers work, that is the one Gus will usually steer you toward. A used one costs less and still gets the same person to call after the sale. Either way, you buy from Gus.",
         "Inventory, prices, and offers change daily, so text Gus for what is on the lot right now.")
     body += "\n" + cta_split("../../", f"Want a {name}? Text Gus and he will check what is on the lot — or what is coming in.")
-    body += "\n" + related("../../", related_links)
+    body += "\n" + related(related_links)
     page("../../", f"models/{slug}",
          f"{year} Hyundai {name} | Gus McClellan, Green Hyundai",
          f"The {year} Hyundai {name} at Green Hyundai in Springfield, IL — {intro}",
