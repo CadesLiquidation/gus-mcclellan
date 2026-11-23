@@ -128,8 +128,7 @@
     }
     .holiday { background:linear-gradient(135deg,#0e3d2c 0%,#0a2b20 100%); color:#f7f3e8; }
     .holiday-grid { display:grid; grid-template-columns:minmax(0,440px) 1fr; gap:clamp(28px,5vw,64px); align-items:center; }
-    .holiday-art img { border-radius:14px; box-shadow:0 16px 48px rgba(0,0,0,.35); width:100%; }
-    .holiday .holiday-eyebrow { font-size:.85rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .holiday-art img { border-radius:14px; box-shadow:0 16px 48px rgba(0,0,0,.35); width:100%; height:auto; }
     .holiday h2 { color:#fff; }
     .holiday p { color:#dcefe4; max-width:560px; font-size:1.08rem; }
     @media (max-width:760px) {
